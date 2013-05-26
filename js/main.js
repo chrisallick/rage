@@ -18,7 +18,7 @@ $(document).ready(function() {
 		$(this).parent().slideUp("slow");
 	});
 
-	$(".player").slideUp(function(){
+	//$(".player").slideUp(function(){
 		$("#header").animate({
 			opacity: 1
 		}, function() {
@@ -30,5 +30,5 @@ $(document).ready(function() {
 				});
 			});
 		});
-	});
+	//});
 });

@@ -19,7 +19,7 @@ img { display: block; }
 .videos .video .thumb { width: 363px; height: 203px; margin-bottom: 26px; }
 .videos .video .title { width: 363px; text-align: center; font: normal 16px Helvetica; color: #000000; text-transform: uppercase; }
 
-.player { width: 1300px; height: 658px; margin: 0 auto; position: relative; background: url("../img/player/bg.jpg") top left no-repeat; }
+.player { width: 1300px; height: 658px; margin: 0 auto; position: relative; background: url("../img/player/bg.jpg") top left no-repeat; display: none; }
 .player .close { cursor: pointer; position: absolute; top: 19px; right: 21px; width: 33px; height: 33px; background: url("../img/player/close.png") top left no-repeat; }
 
 #footer, .push { height: 62px; }
