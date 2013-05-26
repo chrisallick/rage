@@ -8,11 +8,15 @@ $(document).ready(function() {
 	});
 
 	$(".player").slideUp(function(){
-		$("header .logo").animate({
+		$("#header").animate({
 			opacity: 1
-		},function() {
-			$(".row").animate({
+		}, function() {
+			$("#header .nav").animate({
 				opacity: 1
+			}, function() {
+				$(".row").animate({
+					opacity: 1
+				});
 			});
 		});
 	});
