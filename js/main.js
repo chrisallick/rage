@@ -1,10 +1,21 @@
-$(document).ready(function() {
+$(window).load(function(){
 	$(".video").click(function(){
-		$(".player:eq(0)").slideDown();
-	});
+		var vTop = $(".row:eq(0)").offset().top + $(".row:eq(0)").height();
+		var vHeight = 608;
+		var offset = ($(window).height() - vHeight)/2;
+		var scrollHeight = vTop - offset + "px";
+					$("body").animate({
+				scrollTop: scrollHeight
+			}, function() {
+		$(".player:eq(0)").slideDown();				
+			});
 
-	$(".player").click(function(){
-		$(this).slideUp("slow");
+	});
+});
+
+$(document).ready(function() {
+	$(".player .close").click(function(){
+		$(this).parent().slideUp("slow");
 	});
 
 	$(".player").slideUp(function(){
