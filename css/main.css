@@ -13,14 +13,18 @@ img { display: block; }
 
 .row { width: 100%; opacity: 0; }
 
-.videos { cursor: pointer; width: 1140px; height: 291px; margin: 0 auto; }
-.videos .video { width: 363px; height: 250px; float: left; margin-right: 25px; }
+.videos { cursor: pointer; width: 1140px; height: 270px; margin: 0 auto; }
+.videos .videothumb { width: 363px; height: 250px; float: left; margin-right: 25px; }
 .videos .last { margin: 0; }
-.videos .video .thumb { width: 363px; height: 203px; margin-bottom: 26px; }
-.videos .video .title { width: 363px; text-align: center; font: normal 16px Helvetica; color: #000000; text-transform: uppercase; }
+.videos .videothumb .thumb { width: 363px; height: 203px; margin-bottom: 26px; }
+.videos .videothumb .title { width: 363px; text-align: center; font: normal 16px Helvetica; color: #000000; text-transform: uppercase; }
 
-.player { width: 1300px; height: 658px; margin: 0 auto; position: relative; background: url("../img/player/bg.jpg") top left no-repeat; display: none; }
+.player-wrapper { width: 100%; background-color: #000000; margin-bottom: 20px; }
+.player { width: 1300px; height: 0px; overflow: hidden; margin: 0 auto; position: relative; background: url("../img/player/bg.jpg") top left no-repeat; }
+.player .video-wrapper { background-color: #000000; position: absolute; top: 79px; right: 77px; width: 804px; height: 453px; }
 .player .close { cursor: pointer; position: absolute; top: 19px; right: 21px; width: 33px; height: 33px; background: url("../img/player/close.png") top left no-repeat; }
+.player .title { position: absolute; top: 270px; left: 130px; color: #FFFFFF; }
+.player .role { position: absolute; top: 337px; left: 122px; color: #000000; }
 
 #footer, .push { height: 62px; }
 #footer { width: 100%; background: #000000; }
