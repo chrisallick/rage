@@ -1,4 +1,11 @@
 $(window).load(function(){
+
+	setTimeout(function(){
+		$("body,html").animate({
+			scrollTop: 0
+		}, 100);
+	}, 10);
+
 	$(".videothumb").click(function() {
 		var src = $(this).data("src");
 		$("#player1").attr("src", src);
@@ -39,13 +46,6 @@ $(window).load(function(){
 var iframe, players = new Array();
 var playing = false;
 $(document).ready(function() {
-
-	setTimeout(function(){
-		$("body,html").animate({
-			scrollTop: 1
-		}, 100);
-	}, 10);
-
 	$(".player .close").click(function() {
 		playing = false;
 		players[0].api("unload");
