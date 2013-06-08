@@ -45,6 +45,7 @@ $(window).load(function(){
 
 var iframe, players = new Array();
 var playing = false;
+var currentSubNav = "";
 $(document).ready(function() {
 	$(".player .close").click(function() {
 		playing = false;
@@ -72,22 +73,43 @@ $(document).ready(function() {
 
 	$("#navwrapper .openabout").click(function(event){
 		event.preventDefault();
-		$("#closeheader").fadeIn("slow");
-		$("#subnavs .about").fadeIn("slow");
-		$("#subnavswrapper").slideDown();
+		if( currentSubNav != "about" ) {
+			if( $("#subnavs").hasClass("closed") ) {
+				$("#closeheader").fadeIn("slow");
+				$("#subnavs .about").fadeIn("slow");
+				$("#subnavswrapper").slideDown();
+			} else {
+				$("."+currentSubNav).fadeOut(function(){
+					$("#subnavs .about").fadeIn("slow");	
+				});
+			}
+			currentSubNav = "about";
+			$("#subnavs").removeClass().addClass("open");
+		}
 	});
 
 	$("#navwrapper .opencontact").click(function(event){
 		event.preventDefault();
-		$("#closeheader").fadeIn("slow");
-		$("#subnavs .contact").fadeIn("slow");
-		$("#subnavswrapper").slideDown();
+		if( currentSubNav != "contact" ) {
+			if( $("#subnavs").hasClass("closed") ) {
+				$("#closeheader").fadeIn("slow");
+				$("#subnavs .contact").fadeIn("slow");
+				$("#subnavswrapper").slideDown();
+			} else {
+				$("."+currentSubNav).fadeOut(function(){
+					$("#subnavs .contact").fadeIn("slow");	
+				});
+			}
+			currentSubNav = "contact";
+			$("#subnavs").removeClass().addClass("open");
+		}
 	});
 
 	$("#closeheader").click(function() {
+		currentSubNav = "";
+		$("#subnavs").removeClass().addClass("closed");
 		$("#closeheader").fadeOut("fast");
-		$("#subnavs .about").fadeOut("fast");
-		$("#subnavs .contact").fadeOut("fast");
+		$(".subnav").fadeOut("fast");
 		$("#subnavswrapper").slideUp();
 	});
 
