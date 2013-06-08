@@ -1,14 +1,34 @@
+/*
+	Global
+*/
 html, body { width: 100%; height: 100%; background-color: #FFFFFF; }
-
 img { display: block; }
 
-#header { margin: 0 auto; width: 1137px; height: 106px; background: url("../img/logo.png") top left no-repeat; background-position: center; opacity: 0; }
-#header .nav { padding-top: 35px; padding-left: 254px; opacity: 0; }
-#header .nav a { float: left; }
-#header .nav .projects { margin-right: 83px; }
-#header .nav .about { margin-right: 264px; }
-#header .nav .contact { margin-right: 56px; }
+/*
+	Header
+*/
+#header { width: 100%; opacity: 0; background: #FFFFFF; }
+#header #navwrapper { width: 100%; height: 106px; background: url("../img/logo.png") top left no-repeat; background-position: center; }
+#header #navwrapper .nav { margin: 0 auto; width: 883px; padding-top: 35px; padding-left: 254px;  }
+#header #navwrapper .nav a { float: left; }
+#header #navwrapper .nav .projects { margin-right: 83px; }
+#header #navwrapper .nav .openabout { margin-right: 264px; }
+#header #navwrapper .nav .opencontact { margin-right: 56px; }
+#header #subnavswrapper { width: 100%; height: 104px; background: #000000; display: none;  }
+#header #subnavswrapper #subnavs { width: 1137px; height: 104px; position: relative; margin: 0 auto; }
+#header #subnavswrapper #subnavs .about { padding-top: 20px; display: none; }
+#header #subnavswrapper #subnavs .about p { width: 400px; color: #FFFFFF; }
+#header #subnavswrapper #subnavs .about .links { position: absolute; top: 30px; left: 512px; width: 150px; height: 40px; }
+#header #subnavswrapper #subnavs .about .links a { float: left; margin-right: 20px; }
+#header #subnavswrapper #subnavs .contact { display: none; padding-left: 253px; padding-top: 22px; }
+#header #subnavswrapper #subnavs .contact .items .name { float: left; margin-right: 58px; }
+#header #subnavswrapper #subnavs .contact .items .email { float: left; margin-right: 50px; }
+#header #subnavswrapper #subnavs .contact .items .number { float: left; }
+#header #subnavswrapper #subnavs #closeheader { cursor: pointer; position: absolute; top: 48px; right: 0px; display: none; }
 
+/*
+	Rows
+*/
 #wrapper { width: 100%; padding-top: 63px; min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -62px; }
 
 .row { width: 100%; opacity: 0; }
@@ -19,6 +39,9 @@ img { display: block; }
 .videos .videothumb .thumb { width: 363px; height: 203px; margin-bottom: 26px; }
 .videos .videothumb .title { width: 363px; text-align: center; font: normal 16px Helvetica; color: #000000; text-transform: uppercase; }
 
+/*
+	Video Player
+*/
 .player-wrapper { width: 100%; background-color: #000000; margin-bottom: 20px; }
 .player { width: 1300px; height: 0px; overflow: hidden; margin: 0 auto; position: relative; background: url("../img/player/bg.jpg") top left no-repeat; }
 .player .video-wrapper { background-color: #000000; position: absolute; top: 79px; right: 77px; width: 804px; height: 453px; }
@@ -26,8 +49,12 @@ img { display: block; }
 .player .title { position: absolute; top: 270px; left: 130px; color: #FFFFFF; }
 .player .role { position: absolute; top: 337px; left: 122px; color: #000000; }
 
-#footer, .push { height: 62px; }
+
+/*
+	Footer
+*/
 #footer { width: 100%; background: #000000; }
+#footer, .push { height: 62px; }
 #footer .nav { height: 62px; margin: 0 auto; width: 1137px; background: #000000 url("../img/logoFooter.png") top left no-repeat; background-position: center;  }
 #footer .nav a { float: left; }
 #footer .nav .email { margin-right: 148px; }

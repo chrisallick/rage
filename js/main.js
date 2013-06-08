@@ -65,4 +65,25 @@ $(document).ready(function() {
 			});
 		});
 	});
+
+	$("#navwrapper .openabout").click(function(event){
+		event.preventDefault();
+		$("#closeheader").fadeIn("slow");
+		$("#subnavs .about").fadeIn("slow");
+		$("#subnavswrapper").slideDown();
+	});
+
+	$("#navwrapper .opencontact").click(function(event){
+		event.preventDefault();
+		$("#closeheader").fadeIn("slow");
+		$("#subnavs .contact").fadeIn("slow");
+		$("#subnavswrapper").slideDown();
+	});
+
+	$("#closeheader").click(function() {
+		$("#closeheader").fadeOut("fast");
+		$("#subnavs .about").fadeOut("fast");
+		$("#subnavs .contact").fadeOut("fast");
+		$("#subnavswrapper").slideUp();
+	})
 });
