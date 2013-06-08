@@ -62,6 +62,10 @@ $(document).ready(function() {
 		}, function() {
 			$(".row").animate({
 				opacity: 1
+			}, function() {
+				$("#backtotop").animate({
+					opacity: 1
+				});
 			});
 		});
 	});
