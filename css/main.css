@@ -5,6 +5,11 @@ html, body { width: 100%; height: 100%; background-color: #FFFFFF; }
 img { display: block; }
 
 /*
+	Back to top
+*/
+#backtotop { cursor: pointer; position: fixed; right: 0px; top: 50%; margin-top: -51px; z-index: 10000; }
+
+/*
 	Header
 */
 #header { width: 100%;  background: #FFFFFF; }
@@ -48,7 +53,6 @@ img { display: block; }
 .player .close { cursor: pointer; position: absolute; top: 19px; right: 21px; width: 33px; height: 33px; background: url("../img/player/close.png") top left no-repeat; }
 .player .title { position: absolute; top: 270px; left: 130px; color: #FFFFFF; }
 .player .role { position: absolute; top: 337px; left: 122px; color: #000000; }
-
 
 /*
 	Footer

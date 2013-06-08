@@ -85,5 +85,11 @@ $(document).ready(function() {
 		$("#subnavs .about").fadeOut("fast");
 		$("#subnavs .contact").fadeOut("fast");
 		$("#subnavswrapper").slideUp();
-	})
+	});
+
+	$("#backtotop").click(function(){
+		$("body,html").animate({
+			scrollTop: 0
+		})
+	});
 });
