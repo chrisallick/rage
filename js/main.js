@@ -54,10 +54,10 @@ $(document).ready(function() {
 		});
 	});
 
-	$("#header").animate({
+	$("#navwrapper").animate({
 		opacity: 1
 	}, function() {
-		$("#header .nav").animate({
+		$("#navwrapper .nav").animate({
 			opacity: 1
 		}, function() {
 			$(".row").animate({
