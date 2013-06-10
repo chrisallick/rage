@@ -6,38 +6,41 @@ $(window).load(function(){
 		}, 100);
 	}, 10);
 
+	//
+
 	$(".videothumb").click(function() {
+
+		var row = $(this).parents(".row").data("index");
+
+		var player = $(".player-wrapper")[row];
+
+		// populate the data
 		var src = $(this).data("src");
-		$("#player1").attr("src", src);
-
-		var vTop = $(".row:eq(0)").offset().top + $(".row:eq(0)").height();
-		var vHeight = 608;
-		var offset = ($(window).height() - vHeight)/2;
-		var scrollHeight = vTop - offset + "px";
-
-		iframe = $('#player1')[0];
-  		players[0] = $f(iframe);
-
   		var role = $(this).data("role");
   		var title = $('.title', this).html();
+  		
+  		$(".role", player).text( role );
+  		$(".title", player).html( title );
+  		$(".video-wrapper", player).html('<iframe id="player'+row+'"" src="'+src+'" width="804" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
 
-  		$(".player:eq(0) .role").text( role );
-  		$(".player:eq(0) .title").html(title);
-
-		players[0].addEvent('ready', function() {
-			$("body,html").animate({
-				scrollTop: scrollHeight
+		var fired = false;
+		$("body,html").delay(500).animate({
+			scrollTop: $(player).offset().top - $(window).height()/2 + 304
+		}, function() {
+			$(".player",player).animate({
+				height: 608
 			}, function() {
-				if( !playing ) {
-					$(".player:eq(0)").animate({
-						height: 608
-					},function(){
-						players[0].api("play");
+				if( !fired ) {
+					fired = true;
+
+					iframe = $("iframe", player)[0];
+					players[row] = $f(iframe);
+					players[row].addEvent('ready', function() {
+						players[row].api("play");
+						currentPlayer = row;
+						playing = true;
 					});
-					playing = true;
-				} {
-					players[0].api("play");
-				}
+				}				
 			});
 		});
 	});
@@ -45,11 +48,12 @@ $(window).load(function(){
 
 var iframe, players = new Array();
 var playing = false;
+var currentPlayer = -1;
 var currentSubNav = "";
 $(document).ready(function() {
 	$(".player .close").click(function() {
 		playing = false;
-		players[0].api("unload");
+		players[currentPlayer].api("unload");
 		$(this).parent().animate({
 			height: 0
 		});
