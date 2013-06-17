@@ -23,13 +23,21 @@ $(window).load(function(){
   		$(".title", player).html( title );
   		$(".video-wrapper", player).html('<iframe id="player'+row+'"" src="'+src+'" width="804" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
 
+  		$("#backtotop").fadeOut();
+
 		var fired = false;
 		$("body,html").delay(500).animate({
 			scrollTop: $(player).offset().top - $(window).height()/2 + 304
 		}, function() {
-			$(".player",player).animate({
+			$(player).animate({
 				height: 608
 			}, function() {
+				$(".role", player).animate({
+					opacity: 1
+				});
+				$(".title", player).animate({
+					opacity: 1
+				});
 				if( !fired ) {
 					fired = true;
 
@@ -53,8 +61,10 @@ var currentSubNav = "";
 $(document).ready(function() {
 	$(".player .close").click(function() {
 		playing = false;
-		players[currentPlayer].api("unload");
-		$(this).parent().animate({
+
+		$("#backtotop").fadeIn();
+		//players[currentPlayer].api("unload");
+		$(this).parents(".player-wrapper").animate({
 			height: 0
 		});
 	});
