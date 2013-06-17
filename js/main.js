@@ -89,12 +89,12 @@ $(document).ready(function() {
 		event.preventDefault();
 		if( currentSubNav != "about" ) {
 			if( $("#subnavs").hasClass("closed") ) {
-				$("#closeheader").fadeIn("slow");
-				$("#subnavs .about").fadeIn("slow");
-				$("#subnavswrapper").slideDown();
+				$("#closeheader").fadeIn("fast");
+				$("#subnavs .about").fadeIn("fast");
+				$("#subnavswrapper").slideDown("fast");
 			} else {
-				$("."+currentSubNav).fadeOut(function(){
-					$("#subnavs .about").fadeIn("slow");	
+				$("."+currentSubNav).fadeOut("fast",function(){
+					$("#subnavs .about").fadeIn("fast");	
 				});
 			}
 			currentSubNav = "about";
@@ -106,12 +106,12 @@ $(document).ready(function() {
 		event.preventDefault();
 		if( currentSubNav != "contact" ) {
 			if( $("#subnavs").hasClass("closed") ) {
-				$("#closeheader").fadeIn("slow");
-				$("#subnavs .contact").fadeIn("slow");
-				$("#subnavswrapper").slideDown();
+				$("#closeheader").fadeIn("fast");
+				$("#subnavs .contact").fadeIn("fast");
+				$("#subnavswrapper").slideDown("fast");
 			} else {
-				$("."+currentSubNav).fadeOut(function(){
-					$("#subnavs .contact").fadeIn("slow");	
+				$("."+currentSubNav).fadeOut("fast",function(){
+					$("#subnavs .contact").fadeIn("fast");	
 				});
 			}
 			currentSubNav = "contact";
@@ -124,7 +124,7 @@ $(document).ready(function() {
 		$("#subnavs").removeClass().addClass("closed");
 		$("#closeheader").fadeOut("fast");
 		$(".subnav").fadeOut("fast");
-		$("#subnavswrapper").slideUp();
+		$("#subnavswrapper").slideUp("fast");
 	});
 
 	$("#backtotop").click(function(){
