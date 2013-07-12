@@ -42,10 +42,17 @@ img { display: block; }
 .row { width: 100%; opacity: 0; }
 
 .videos { cursor: pointer; width: 1140px; height: 270px; margin: 0 auto; }
-.videos .videothumb { width: 363px; height: 250px; float: left; margin-right: 25px; }
+.videos .videothumb { width: 363px; height: 250px; float: left; margin-right: 25px; position: relative; }
 .videos .last { margin: 0; }
-.videos .videothumb .thumb { width: 363px; height: 204px; margin-bottom: 26px; }
+.videos .videothumb .thumb { width: 364px; height: 204px; margin-bottom: 26px; }
 .videos .videothumb .title { width: 363px; text-align: center; font: normal 16px Helvetica; color: #000000; text-transform: uppercase; }
+.videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 0px; opacity: 0;
+   -webkit-transition:all .100s ease-in;  
+   -moz-transition:all .1s ease-in;  
+   -o-transition:all .1s ease-in;  
+   transition:all .1s ease-in;  
+}
+.videos .videothumb:hover .overlay { opacity: 1; height: 204px; }
 
 /*
 	Video Player
@@ -57,9 +64,9 @@ img { display: block; }
 .player-wrapper .player { z-index: 100; width: 1300px; height: 608px; overflow: hidden; margin: 0 auto; position: relative; }
 .player-wrapper .player .video-wrapper { background-color: #000000; position: absolute; top: 79px; right: 77px; width: 804px; height: 453px; }
 .player-wrapper .player .close { cursor: pointer; position: absolute; top: 19px; right: 21px; width: 33px; height: 33px; background: url("../img/player/close.png") top left no-repeat; }
-.player-wrapper .player .title { opacity: 0; position: absolute; top: 272px; left: 109px; color: #FFFFFF; font-family: "TGBC20"; font-size: 26px; }
+.player-wrapper .player .title { opacity: 0; position: absolute; top: 272px; left: 59px; width: 294px; text-align: center; color: #FFFFFF; font-family: "TGBC20"; font-size: 26px; }
 .player-wrapper .player .title span { font-family: "TGBCO18"; }
-.player-wrapper .player .role { opacity: 0; position: absolute; top: 339px; left: 138px; color: #000000; font-family: "TGBC20"; font-size: 18px;}
+.player-wrapper .player .role { opacity: 0; position: absolute; top: 339px; left: 117px; width: 160px; text-align: center; color: #000000; font-family: "TGBC20"; font-size: 18px;}
 
 /*
 	Footer

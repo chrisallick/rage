@@ -69,6 +69,20 @@ $(document).ready(function() {
 		});
 	});
 
+	// $(".videothumb").mouseover(function(){
+	// 	// $(".title",this).animate({
+	// 	// 	backgroundColor: "#000000",
+	// 	// 	color: "#FFFFFF"
+	// 	// });
+	// 	$(".overlay", this).animate({
+	// 		opacity: 1
+	// 	});
+	// }).mouseout(function(){
+	// 	$(".overlay", this).animate({
+	// 		opacity: 0
+	// 	});
+	// });
+
 	$(".videothumb").each(function(index,value){
 		if( $(this).data("id") ) {
 			var vid = $(this).data("id");
@@ -79,6 +93,9 @@ $(document).ready(function() {
 					var new_title = ""
 					if( title.length == 3 )  {
 						new_title = title[0] + "<span>" + title[1] + "</span>" + title[2];
+						
+					} else {
+						new_title = data.title;
 					}
 					$(".title", value).html(new_title);
 				}
