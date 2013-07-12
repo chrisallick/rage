@@ -1,11 +1,4 @@
 $(window).load(function(){
-
-	setTimeout(function(){
-		$("body,html").animate({
-			scrollTop: 0
-		}, 100);
-	}, 10);
-
 	//
 
 	$(".videothumb").click(function() {
@@ -15,7 +8,7 @@ $(window).load(function(){
 		var player = $(".player-wrapper")[row];
 
 		// populate the data
-		var src = $(this).data("src");
+		var src = "http://player.vimeo.com/video/"+$(this).data("id")+"?api=1&player_id=player"+row;
   		var role = $(this).data("role");
   		var title = $('.title', this).html();
   		
@@ -59,6 +52,13 @@ var playing = false;
 var currentPlayer = -1;
 var currentSubNav = "";
 $(document).ready(function() {
+
+	setTimeout(function(){
+		$("body,html").animate({
+			scrollTop: 0
+		}, 100);
+	}, 10);
+
 	$(".player .close").click(function() {
 		playing = false;
 
@@ -67,6 +67,27 @@ $(document).ready(function() {
 		$(this).parents(".player-wrapper").animate({
 			height: 0
 		});
+	});
+
+	$(".videothumb").each(function(index,value){
+		if( $(this).data("id") ) {
+			var vid = $(this).data("id");
+			$.getJSON('http://vimeo.com/api/oembed.json?url=http%3A//vimeo.com/'+vid+'&width=804&callback=?', {format: "json"}, function(data) {
+				//console.log( data);
+				if( data.title ) {
+					var title = data.title.split("\"");
+					var new_title = ""
+					if( title.length == 3 )  {
+						new_title = title[0] + "<span>" + title[1] + "</span>" + title[2];
+					}
+					$(".title", value).html(new_title);
+				}
+			    if( data.thumbnail_url ) {
+			    	var thumb_url = data.thumbnail_url;
+			    	$(".thumb",value).attr('src', thumb_url );
+			    }
+			});			
+		}
 	});
 
 	$("#navwrapper").animate({
@@ -132,4 +153,5 @@ $(document).ready(function() {
 			scrollTop: 0
 		})
 	});
+
 });
