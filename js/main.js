@@ -69,20 +69,6 @@ $(document).ready(function() {
 		});
 	});
 
-	// $(".videothumb").mouseover(function(){
-	// 	// $(".title",this).animate({
-	// 	// 	backgroundColor: "#000000",
-	// 	// 	color: "#FFFFFF"
-	// 	// });
-	// 	$(".overlay", this).animate({
-	// 		opacity: 1
-	// 	});
-	// }).mouseout(function(){
-	// 	$(".overlay", this).animate({
-	// 		opacity: 0
-	// 	});
-	// });
-
 	$(".videothumb").each(function(index,value){
 		if( $(this).data("id") ) {
 			var vid = $(this).data("id");
