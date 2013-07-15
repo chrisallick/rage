@@ -5,6 +5,8 @@ $(window).load(function(){
 
 		var row = $(this).parents(".row").data("index");
 
+		console.log( row );
+
 		var player = $(".player-wrapper")[row];
 
 		// populate the data
@@ -19,31 +21,58 @@ $(window).load(function(){
   		$("#backtotop").fadeOut();
 
 		var fired = false;
-		$("body,html").delay(500).animate({
-			scrollTop: $(player).offset().top - $(window).height()/2 + 304
-		}, function() {
-			$(player).animate({
-				height: 608
-			}, function() {
-				$(".role", player).animate({
-					opacity: 1
-				});
-				$(".title", player).animate({
-					opacity: 1
-				});
-				if( !fired ) {
-					fired = true;
-
-					iframe = $("iframe", player)[0];
-					players[row] = $f(iframe);
-					players[row].addEvent('ready', function() {
-						players[row].api("play");
-						currentPlayer = row;
-						playing = true;
+		if( row == 19 || row == 18 ) {
+				$(player).delay(500).animate({
+					height: 608
+				}, function() {
+					$(".role", player).animate({
+						opacity: 1
 					});
-				}				
+					$(".title", player).animate({
+						opacity: 1
+					});
+					if( !fired ) {
+						fired = true;
+
+						iframe = $("iframe", player)[0];
+						players[row] = $f(iframe);
+						players[row].addEvent('ready', function() {
+							players[row].api("play");
+							currentPlayer = row;
+							playing = true;
+						});
+					}
+					$("body,html").animate({
+						scrollTop: $(player).offset().top - $(window).height()/2 + 250
+					});
+				});
+		} else {
+			$("body,html").delay(500).animate({
+				scrollTop: $(player).offset().top - $(window).height()/2 + 250
+			}, function() {
+				$(player).animate({
+					height: 608
+				}, function() {
+					$(".role", player).animate({
+						opacity: 1
+					});
+					$(".title", player).animate({
+						opacity: 1
+					});
+					if( !fired ) {
+						fired = true;
+
+						iframe = $("iframe", player)[0];
+						players[row] = $f(iframe);
+						players[row].addEvent('ready', function() {
+							players[row].api("play");
+							currentPlayer = row;
+							playing = true;
+						});
+					}				
+				});
 			});
-		});
+		}
 	});
 });
 
