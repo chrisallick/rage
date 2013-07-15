@@ -37,7 +37,7 @@ img { display: block; }
 /*
 	Rows
 */
-#wrapper { width: 100%; padding-top: 63px; min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -62px; }
+#wrapper { width: 100%; padding-top: 169px; min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -62px; }
 
 .row { width: 100%; opacity: 0; }
 
