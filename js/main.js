@@ -9,6 +9,14 @@ $(window).load(function(){
 
 		var player = $(".player-wrapper")[row];
 
+		$(".playing-now").css({
+			height: 0
+		}, 250, function() {
+
+		}).removeClass("playing-now");
+
+		$($(".player-wrapper")[row]).addClass("playing-now");
+
 		// populate the data
 		var src = "http://player.vimeo.com/video/"+$(this).data("id")+"?api=1&player_id=player"+row;
   		var role = $(this).data("role");
@@ -48,7 +56,7 @@ $(window).load(function(){
 				});
 		} else {
 			$("body,html").delay(500).animate({
-				scrollTop: $(player).offset().top - $(window).height()/2 + 250
+				scrollTop: $(player).offset().top - 115// - $(window).height()/2 + 250
 			}, function() {
 				$(player).animate({
 					height: 608
