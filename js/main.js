@@ -15,6 +15,12 @@ $(window).load(function(){
 
 		}).removeClass("playing-now");
 
+		currentSubNav = "";
+		$("#subnavs").removeClass().addClass("closed");
+		$("#closeheader").fadeOut("fast");
+		$(".subnav").fadeOut("fast");
+		$("#subnavswrapper").slideUp("fast");
+
 		$($(".player-wrapper")[row]).addClass("playing-now");
 
 		// populate the data
@@ -192,6 +198,14 @@ $(document).ready(function() {
 		$("body,html").animate({
 			scrollTop: 0
 		})
+	});
+
+	$(window).scroll(function(){
+		currentSubNav = "";
+		$("#subnavs").removeClass().addClass("closed");
+		$("#closeheader").fadeOut("fast");
+		$(".subnav").fadeOut("fast");
+		$("#subnavswrapper").slideUp("fast");
 	});
 
 });
