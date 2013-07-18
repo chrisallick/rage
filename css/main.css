@@ -29,7 +29,7 @@ img { display: block; }
 #header #subnavswrapper #subnavs .about p { width: 370px; color: #FFFFFF; font-family: 'TGBC20'; font-size: 13px; line-height: 16px; }
 #header #subnavswrapper #subnavs .about .links { position: absolute; top: 30px; left: 512px; width: 150px; height: 40px; }
 #header #subnavswrapper #subnavs .about .links a { float: left; margin-right: 20px; }
-#header #subnavswrapper #subnavs .contact { position: absolute; width: 400px; height: 100%; top: 0px; left: 0px; padding-left: 253px; padding-top: 22px; display: none; }
+#header #subnavswrapper #subnavs .contact { position: absolute; width: 400px; height: 100%; top: 0px; left: 0px; padding-left: 247px; padding-top: 22px; display: none; }
 #header #subnavswrapper #subnavs .contact .items .name { float: left; margin-right: 58px; }
 #header #subnavswrapper #subnavs .contact .items .email { float: left; margin-right: 50px; }
 #header #subnavswrapper #subnavs .contact .items .number { float: left; }
