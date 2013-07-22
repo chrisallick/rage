@@ -1,0 +1,99 @@
+/*
+	Global
+*/
+html, body { width: 100%; height: 100%; background-color: #FFFFFF; }
+img { display: block; }
+
+@font-face { font-family: 'TGBC20'; src: url('../font/TradeGothicLTStd-BdCn20.otf'); }
+@font-face { font-family: 'TGBCO18'; src: url('../font/TradeGothicLTStd-Cn18Obl.otf'); }
+@font-face { font-family: 'TGBCO20'; src: url('../font/TradeGothicLTStd-BdCn20Obl'); }
+
+/*
+	Back to top
+*/
+#backtotop { cursor: pointer; position: fixed; right: 0px; top: 50%; margin-top: -51px; z-index: 10000; opacity: 0; }
+
+/*
+	Header
+*/
+#header { width: 100%; background: #FFFFFF; position: fixed; top: 0px; z-index: 1000;}
+#header #navwrapper { opacity: 0; width: 1136px; height: 106px; background: url("../img/logo.png") top left no-repeat; background-position: center; margin: 0 auto; }
+#header #navwrapper .nav { opacity: 0; margin: 0 auto; width: 883px; padding-top: 35px; padding-left: 254px;  }
+#header #navwrapper .nav a { float: left; }
+#header #navwrapper .nav .projects { margin-right: 83px; }
+#header #navwrapper .nav .openabout { margin-right: 264px; }
+#header #navwrapper .nav .opencontact { margin-right: 56px; }
+#header #subnavswrapper { width: 100%; height: 104px; background: #000000; display: none;  }
+#header #subnavswrapper #subnavs { width: 1137px; height: 104px; position: relative; margin: 0 auto; }
+#header #subnavswrapper #subnavs .about { position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; padding-top: 27px; display: none; }
+#header #subnavswrapper #subnavs .about p { width: 370px; color: #FFFFFF; font-family: 'TGBC20'; font-size: 13px; line-height: 16px; }
+#header #subnavswrapper #subnavs .about .links { position: absolute; top: 30px; left: 512px; width: 150px; height: 40px; }
+#header #subnavswrapper #subnavs .about .links a { float: left; margin-right: 20px; }
+#header #subnavswrapper #subnavs .contact { position: absolute; width: 400px; height: 100%; top: 0px; left: 0px; padding-left: 247px; padding-top: 22px; display: none; }
+#header #subnavswrapper #subnavs .contact .items .name { float: left; margin-right: 58px; }
+#header #subnavswrapper #subnavs .contact .items .email { float: left; margin-right: 50px; }
+#header #subnavswrapper #subnavs .contact .items .number { float: left; }
+#header #subnavswrapper #subnavs #closeheader { cursor: pointer; position: absolute; top: 48px; right: 0px; display: none; }
+
+/*
+	CATEGORIES
+*/
+
+#categories { width: 200px; height: 16px; position: fixed; top: 0px; right: 0px; z-index: 10000; cursor: pointer; }
+#categories img { display: inline; }
+#categories ul li { color: #858585; }
+#categories ul .on { color: #4c4c4c; }
+#categories ul li .plus { color: #F5F5F5; }
+#categories ul .on .plus { color: #4c4c4c; }
+/*
+	Rows
+*/
+#wrapper { width: 100%; padding-top: 169px; min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -62px; }
+
+.row { width: 100%; opacity: 0; }
+
+.videos { cursor: pointer; width: 1140px; height: 270px; margin: 0 auto; }
+.videos .videothumb { width: 363px; height: 250px; float: left; margin-right: 25px; position: relative; }
+.videos .last { margin: 0; }
+.videos .videothumb .thumb { width: 364px; height: 204px; margin-bottom: 26px; }
+.videos .videothumb .title { width: 363px; text-align: center; font: normal 16px Helvetica; color: #000000; text-transform: uppercase; font-family: "TGBC20"; }
+.videos .videothumb .title span { font-family: "TGBCO18"; }
+.videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 0px; opacity: 0;
+   -webkit-transition:all .100s ease-in;  
+   -moz-transition:all .1s ease-in;  
+   -o-transition:all .1s ease-in;  
+   transition:all .1s ease-in;  
+}
+.videos .videothumb:hover .overlay { opacity: 1; height: 204px;
+	-webkit-transition:all .200s ease-in;
+   -moz-transition:all .2s ease-in;  
+   -o-transition:all .2s ease-in;  
+   transition:all .2s ease-in;   }
+
+/*
+	Video Player
+*/
+.player-wrapper { position: relative; width: 100%; background-color: #000000; margin-bottom: 20px; background: #000000 url("../img/player/bg.jpg") top left no-repeat; background-position: center; height: 0px; overflow: hidden;}
+.player-wrapper .overlay { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1; background: url("../img/player/gradient.png") top left repeat-x; }
+.player-wrapper .leftcap { position: absolute; top: 0px; left: 0px; width: 120px; height: 100%; z-index: 10; background: url("../img/player/leftcap.png") top left no-repeat; }
+.player-wrapper .rightcap { position: absolute; top: 0px; right: 0px; width: 120px; height: 100%; z-index: 10; background: url("../img/player/rightcap.png") top left no-repeat; }
+.player-wrapper .player { z-index: 100; width: 1300px; height: 608px; overflow: hidden; margin: 0 auto; position: relative; }
+.player-wrapper .player .video-wrapper { background-color: #000000; position: absolute; top: 79px; right: 77px; width: 804px; height: 453px; }
+.player-wrapper .player .close { cursor: pointer; position: absolute; top: 19px; right: 21px; width: 33px; height: 33px; background: url("../img/player/close.png") top left no-repeat; }
+.player-wrapper .player .title { opacity: 0; position: absolute; top: 272px; left: 59px; width: 294px; text-align: center; color: #FFFFFF; font-family: "TGBC20"; font-size: 26px; }
+.player-wrapper .player .title span { font-family: "TGBCO18"; }
+.player-wrapper .player .role { opacity: 0; position: absolute; top: 339px; left: 117px; width: 160px; text-align: center; color: #000000; font-family: "TGBC20"; font-size: 18px;}
+
+/*
+	Footer
+*/
+#footer { width: 100%; background: #000000; }
+#footer, .push { height: 62px; }
+#footer .nav { height: 62px; margin: 0 auto; width: 1137px; background: #000000 url("../img/logoFooter.png") top left no-repeat; background-position: center;  }
+#footer .nav a { float: left; }
+#footer .nav .email { margin-right: 148px; }
+#footer .nav .number { float: left; margin-right: 419px; }
+#footer .nav .copyright { float: left; margin-right: 171px; }
+#footer .nav .vimeo { float: left; margin-right: 14px; }
+#footer .nav .flickr { float: left; margin-right: 16px; }
+#footer .nav .imdb { float: left; }

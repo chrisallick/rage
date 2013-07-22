@@ -1,0 +1,38 @@
+        	<% video_data.each_slice(3).with_index do |(one, two, three), index| %>
+				<div class="row" data-index="<%= index %>">
+	                 <div class="videos" class="clear">
+	                    <div class="videothumb" data-role="<%= one[:role] %>" data-id="<%= one[:id] %>">
+	                        <img class="thumb" src="" />
+	                        <img class="overlay" src="/img/overlay_thumb.png" />
+	                        <p class="title"></p>
+	                    </div>
+	                    <% if two %>
+		                    <div class="videothumb" data-role="<%= two[:role] %>" data-id="<%= two[:id] %>">
+		                        <img class="thumb" src="" />
+		                        <img class="overlay" src="/img/overlay_thumb.png" />
+		                        <p class="title"></p>
+		                    </div>
+	                    <% end %>
+	                    <% if three %>
+		                    <div class="videothumb last" data-role="<%= three[:role] %>" data-id="<%= three[:id] %>">
+		                        <img class="thumb" src="" />
+		                        <img class="overlay" src="/img/overlay_thumb.png" />
+		                        <p class="title"></p>
+		                    </div>
+	                    <% end %>
+	                </div>
+	            </div>
+	            <div class="player-wrapper">
+	                <div class="overlay"></div>
+	                <div class="leftcap"></div>
+	                <div class="player">
+	                    <div class="title"></div>
+	                    <div class="role"></div>
+	                    <div class="video-wrapper">
+	                        
+	                    </div>
+	                    <div class="close"></div>
+	                </div>
+	                <div class="rightcap"></div>
+	            </div>
+        	<% end %>

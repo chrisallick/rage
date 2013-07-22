@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RAGE</title>
+
+        <meta charset="utf-8">
+        
+        <link href='./css/reset.css' media='all' rel='stylesheet' type='text/css' />
+        <link href='./css/main.css' media='all' rel='stylesheet' type='text/css' />
+        
+        <script src='./js/jq.js' type='text/javascript'></script>
+        <script src='./js/jq.color.js' type='text/javascript'></script>
+        <script src='./js/main.js' type='text/javascript'></script>
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-42616754-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div id="subnavswrapper">
+                <div id="subnavs" class="closed">
+                    <div class="about subnav">
+                        <p>R.J. Glass is a New York based editor, colorist, technical director, and cinematographer. Originally from San Francisco, he attended the Tisch School of the Arts at NYU and received a degree in Film and Television. R.J. is currently the staff editor at Hornet Inc. in New York.</p>
+                        <div class="links clear">
+                            <a class="vimeo" href="http://vimeo.com/mynameisrage"><img src="/img/vimeoBtn.png" /></a>
+                            <a class="flickr" href="http://www.flickr.com/photos/rager"><img src="/img/flickrBtn.png" /></a>
+                            <a class="imdb" href="http://www.imdb.com/name/nm3633806"><img src="/img/imdbBtn.png" /></a>
+                        </div>
+                    </div>
+                    <div class="contact subnav">
+                        <div class="items clear">
+                            <img class="name" src="/img/name.png" />
+                            <a class="email" href="mailto:rj@mynameisrage.com"><img src="/img/emailBtn.png" /></a>
+                            <img class="number" src="/img/number.png" />
+                        </div>
+                    </div>
+                    <div id="closeheader">
+                        <img src="/img/closeheader.png" />
+                    </div>
+                </div>
+            </div>
+            <div id="navwrapper">
+                <div class="nav clear">
+                    <a class="projects" href=""><img src="/img/projectsBtn.png" /></a>
+                    <a class="openabout" href=""><img src="/img/aboutBtn.png" /></a>
+                    <a class="opencontact" href=""><img src="/img/contactBtn.png" /></a>
+                    <a class="cv" href=""><img src="/img/cvBtn.png" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="categories">
+            <img src="/img/categories.png" />
+            <span>CATEGORIES</span>
+            <ul>
+                <li data-role="DIRECTOR" class="on"><span class="plus">+</span> DIRECTOR</li>
+                <li data-role="CINEMATOGRAPHER" class="on"><span class="plus">+</span> CINEMATOGRAPHER</li>
+                <li data-role="EDITOR" class="on"><span class="plus">+</span> EDITOR</li>
+                <li data-role="COLORIST" class="on"><span class="plus">+</span> COLORIST</li>
+            </ul>
+        </div>
+
+        <div id="wrapper">
+            <%= yield %>
+
+            <div class="push"></div>
+        </div>
+
+        <div id="footer">
+            <div class="nav">
+                <a class="email" href="mailto:rj@mynameisrage"><img src="/img/emailBtn.png" /></a>
+                <img class="number" src="/img/number.png" />
+                <img class="copyright" src="/img/copyright.png" />
+                <a class="vimeo" href="http://vimeo.com/mynameisrage"><img src="/img/vimeoBtn.png" /></a>
+                <a class="flickr" href="http://www.flickr.com/photos/rager"><img src="/img/flickrBtn.png" /></a>
+                <a class="imdb" href="http://www.imdb.com/name/nm3633806"><img src="/img/imdbBtn.png" /></a>
+            </div>
+        </div>
+
+        <div id="backtotop">
+            <img src="/img/backtotop.png" />
+        </div>
+    </body>
+</html>
