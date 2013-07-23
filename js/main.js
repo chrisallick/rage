@@ -24,7 +24,7 @@ $(window).load(function(){
 		$($(".player-wrapper")[row]).addClass("playing-now");
 
 		// populate the data
-		var src = "http://player.vimeo.com/video/"+$(this).data("id")+"?api=1&player_id=player"+row;
+		var src = "https://player.vimeo.com/video/"+$(this).data("id")+"?api=1&player_id=player"+row;
   		var role = $(this).data("role");
   		var title = $('.title', this).html();
   		
@@ -115,7 +115,7 @@ $(document).ready(function() {
 	$(".videothumb").each(function(index,value){
 		if( $(this).data("id") ) {
 			var vid = $(this).data("id");
-			$.getJSON('https://vimeo.com/api/oembed.json?url=http%3A//vimeo.com/'+vid+'&width=804&callback=?', {format: "json"}, function(data) {
+			$.getJSON('https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/'+vid+'&width=804&callback=?', {format: "json"}, function(data) {
 				//console.log( data);
 				if( data.title ) {
 					var title = data.title.split("\"");
