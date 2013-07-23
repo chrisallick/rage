@@ -115,7 +115,7 @@ $(document).ready(function() {
 	$(".videothumb").each(function(index,value){
 		if( $(this).data("id") ) {
 			var vid = $(this).data("id");
-			$.getJSON('http://vimeo.com/api/oembed.json?url=http%3A//vimeo.com/'+vid+'&width=804&callback=?', {format: "json"}, function(data) {
+			$.getJSON('https://vimeo.com/api/oembed.json?url=http%3A//vimeo.com/'+vid+'&width=804&callback=?', {format: "json"}, function(data) {
 				//console.log( data);
 				if( data.title ) {
 					var title = data.title.split("\"");
