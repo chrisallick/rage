@@ -16,6 +16,8 @@ attach_clicks = function() {
 
 	$(".videothumb").click(function() {
 
+		console.log("gotime");
+
 		for( var i = 0,len = players.length; i < len; i++ ) {
 			if( players[i] && players[i].api ) {
 				players[i].api("unload");
@@ -71,9 +73,11 @@ attach_clicks = function() {
 						iframe = $("iframe", player)[0];
 						players[row] = $f(iframe);
 						players[row].addEvent('ready', function() {
-							players[row].api("play");
-							currentPlayer = row;
-							playing = true;
+							if( players[row] && players[row].api ) {
+								players[row].api("play");
+								currentPlayer = row;
+								playing = true;								
+							}
 						});
 					}
 					$("body,html").animate({
@@ -99,9 +103,11 @@ attach_clicks = function() {
 						iframe = $("iframe", player)[0];
 						players[row] = $f(iframe);
 						players[row].addEvent('ready', function() {
-							players[row].api("play");
-							currentPlayer = row;
-							playing = true;
+							if( players[row] && players[row].api ) {
+								players[row].api("play");
+								currentPlayer = row;
+								playing = true;								
+							}
 						});
 					}				
 				});
@@ -111,19 +117,17 @@ attach_clicks = function() {
 }
 
 $(window).load(function(){
+	console.log("loaded");
 	attach_clicks();
 });
 
 load_categories = function() {
 	var q = "/categories?cats="+categories.join(",");
 	$.get(q,function(data){
-		$("#wrapper").html(data);
-
-		setup_thumbs();
-
-		attach_clicks();
-
-		show_rows();
+		$("#wrapper").html(data).ready(function(){
+			players = [];
+			setup_thumbs(true);
+		});
 	});
 }
 
@@ -137,7 +141,7 @@ show_rows = function() {
 	});
 }
 
-setup_thumbs = function() {
+setup_thumbs = function(wait) {
 	$(".videothumb").each(function(index,value){
 		if( $(this).data("id") ) {
 			var vid = $(this).data("id");
@@ -160,6 +164,11 @@ setup_thumbs = function() {
 			});			
 		}
 	});
+	if(wait){
+					attach_clicks();
+
+			show_rows();
+		}
 }
 
 var iframe, players = new Array();
