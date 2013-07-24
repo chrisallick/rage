@@ -109,6 +109,8 @@ load_categories = function() {
 
 			setup_thumbs();
 
+			attach_clicks();
+
 			show_rows();
 		});		
 	//}
