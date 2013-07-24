@@ -79,7 +79,7 @@ video_data = {
             "18675123"
         ]
     }, {
-        :role => "CINEMATOGRAPHER/EDITOR",
+        :role => "CINEMATOGRAPHER",
         :videos => [
             "64667738"
         ]
