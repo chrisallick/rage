@@ -1,26 +1,39 @@
 
 attach_clicks = function() {
 
-	$(".player .close").click(function() {
+	$(".player-wrapper .close").click(function() {
 		playing = false;
+
+		if( players && players[currentPlayer] && players[currentPlayer].api ) {
+			players[currentPlayer].api("unload");
+		}
 
 		$("#backtotop").fadeIn();
 		$(this).parents(".player-wrapper").css({
 			height: 0
-		});
+		});	
 	});
 
 	$(".videothumb").click(function() {
+
+		for( var i = 0,len = players.length; i < len; i++ ) {
+			if( players[i] && players[i].api ) {
+				players[i].api("unload");
+			}
+		}
 
 		var row = $(this).parents(".row").data("index");
 
 		var player = $(".player-wrapper")[row];
 
-		$(".playing-now").css({
-			height: 0
-		}, 250, function() {
+		if( currentPlayer != row ) {
+			$(".playing-now").css({
+				height: 0
+			}, 250, function() {
 
-		}).removeClass("playing-now");
+			}).removeClass("playing-now");			
+		}
+
 
 		currentSubNav = "";
 		$("#subnavs").removeClass().addClass("closed");
@@ -103,17 +116,15 @@ $(window).load(function(){
 
 load_categories = function() {
 	var q = "/categories?cats="+categories.join(",");
-	//if( categories.length > 0 ) {
-		$.get(q,function(data){
-			$("#wrapper").html(data);
+	$.get(q,function(data){
+		$("#wrapper").html(data);
 
-			setup_thumbs();
+		setup_thumbs();
 
-			attach_clicks();
+		attach_clicks();
 
-			show_rows();
-		});		
-	//}
+		show_rows();
+	});
 }
 
 show_rows = function() {
