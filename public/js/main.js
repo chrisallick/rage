@@ -153,7 +153,7 @@ var iframe, players = new Array();
 var playing = false;
 var currentPlayer = -1;
 var currentSubNav = "";
-var categories = ["DIRECTOR","EDITOR","CINEMATOGRAPHER","COLORIST"];
+var categories = new Array();
 $(document).ready(function() {
 
 	setTimeout(function(){
