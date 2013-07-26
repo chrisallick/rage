@@ -100,10 +100,12 @@ img { display: block; }
 #footer { width: 100%; background: #000000; }
 #footer, .push { height: 62px; }
 #footer .nav { height: 62px; margin: 0 auto; width: 1137px; background: #000000 url("../img/logoFooter.png") top left no-repeat; background-position: center;  }
-#footer .nav a { float: left; }
-#footer .nav .email { margin-right: 148px; }
-#footer .nav .number { float: left; margin-right: 419px; }
-#footer .nav .copyright { float: left; margin-right: 171px; }
+
+#footer .nav a, #footer .nav p { float: left; font-family: 'TGBC18'; font-size: 13px; }
+#footer .nav .email { padding-top: 27px; margin-right: 148px; color: #FFFFFF; }
+#footer .nav .number { padding-top: 27px; float: left; margin-right: 419px; color: #FFFFFF; }
+#footer .nav .copyright { padding-top: 27px; float: left; margin-right: 171px; color: #FFFFFF; }
+
 #footer .nav .vimeo { float: left; margin-right: 14px; }
 #footer .nav .flickr { float: left; margin-right: 16px; }
 #footer .nav .imdb { float: left; }
