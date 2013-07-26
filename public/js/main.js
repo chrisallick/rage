@@ -15,9 +15,6 @@ attach_clicks = function() {
 	});
 
 	$(".videothumb").click(function() {
-
-		console.log("gotime");
-
 		for( var i = 0,len = players.length; i < len; i++ ) {
 			if( players[i] && players[i].api ) {
 				players[i].api("unload");
@@ -48,10 +45,11 @@ attach_clicks = function() {
 		// populate the data
 		var src = "http://player.vimeo.com/video/"+$(this).data("id")+"?api=1&player_id=player"+row;
   		var role = $(this).data("role");
-  		var title = $('.title', this).html();
+  		var main_title = $('.title .main', this).text().replace(" - ", "");
+  		var sub_title = $('.title .it', this).text();
   		
-  		$(".role", player).text( role );
-  		$(".title", player).html( title );
+  		$(".role", player).html( "<p>"+role+"</p>" );
+  		$(".title", player).html( "<p class='main'>"+main_title+"</p><p class='sub'>" + sub_title + "</p>" );
   		$(".video-wrapper", player).html('<iframe id="player'+row+'"" src="'+src+'" width="804" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
 
   		$("#backtotop").fadeOut();
@@ -150,7 +148,7 @@ setup_thumbs = function(wait) {
 					var title = data.title.split("\"");
 					var new_title = ""
 					if( title.length == 3 )  {
-						new_title = title[0] + "<span class='it'>" + title[1] + "</span><span class='plain'>" + title[2] + "</span>";
+						new_title = "<span class='main'>" + title[0] + "</span><span class='it'>" + title[1] + "</span><span class='plain'>" + title[2] + "</span>";
 						
 					} else {
 						new_title = data.title;
