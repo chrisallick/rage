@@ -121,7 +121,7 @@ $(document).ready(function() {
 					var title = data.title.split("\"");
 					var new_title = ""
 					if( title.length == 3 )  {
-						new_title = title[0] + "<span>" + title[1] + "</span>" + title[2];
+						new_title = title[0] + "<span class='it'>" + title[1] + "</span><span class='plain'>" + title[2] + "</span>";
 						
 					} else {
 						new_title = data.title;
