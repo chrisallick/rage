@@ -5,8 +5,10 @@ html, body { width: 100%; height: 100%; background-color: #FFFFFF; }
 img { display: block; }
 
 @font-face { font-family: 'TGBC20'; src: url('../font/TradeGothicLTStd-BdCn20.otf'); }
-@font-face { font-family: 'TGBCO18'; src: url('../font/TradeGothicLTStd-Cn18Obl.otf'); }
 @font-face { font-family: 'TGBCO20'; src: url('../font/TradeGothicLTStd-BdCn20Obl'); }
+
+@font-face { font-family: 'TGBC18'; src: url('../font/TradeGothicLTStd-Cn18.otf'); }
+@font-face { font-family: 'TGBCO18'; src: url('../font/TradeGothicLTStd-Cn18Obl.otf'); }
 
 /*
 	Back to top
@@ -26,13 +28,13 @@ img { display: block; }
 #header #subnavswrapper { width: 100%; height: 104px; background: #000000; display: none;  }
 #header #subnavswrapper #subnavs { width: 1137px; height: 104px; position: relative; margin: 0 auto; }
 #header #subnavswrapper #subnavs .about { position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; padding-top: 27px; display: none; }
-#header #subnavswrapper #subnavs .about p { width: 370px; color: #FFFFFF; font-family: 'TGBC20'; font-size: 13px; line-height: 16px; }
+#header #subnavswrapper #subnavs .about p { width: 370px; color: #FFFFFF; font-family: 'TGBC18'; font-size: 13px; line-height: 16px; }
 #header #subnavswrapper #subnavs .about .links { position: absolute; top: 30px; left: 512px; width: 150px; height: 40px; }
 #header #subnavswrapper #subnavs .about .links a { float: left; margin-right: 20px; }
-#header #subnavswrapper #subnavs .contact { position: absolute; width: 400px; height: 100%; top: 0px; left: 0px; padding-left: 247px; padding-top: 22px; display: none; }
-#header #subnavswrapper #subnavs .contact .items .name { float: left; margin-right: 58px; }
-#header #subnavswrapper #subnavs .contact .items .email { float: left; margin-right: 50px; }
-#header #subnavswrapper #subnavs .contact .items .number { float: left; }
+#header #subnavswrapper #subnavs .contact { position: absolute; width: 400px; height: 100%; top: 0px; left: 0px; padding-left: 255px; padding-top: 48px; display: none; font-family: 'TGBC18'; font-size: 13px; }
+#header #subnavswrapper #subnavs .contact .items .name { float: left; margin-right: 63px; color: #FFFFFF; }
+#header #subnavswrapper #subnavs .contact .items .number { float: left; margin-right: 60px; color: #FFFFFF; }
+#header #subnavswrapper #subnavs .contact .items .email { float: left; color: #FFFFFF; }
 #header #subnavswrapper #subnavs #closeheader { cursor: pointer; position: absolute; top: 48px; right: 0px; display: none; }
 
 /*
@@ -63,7 +65,8 @@ img { display: block; }
 .videos .last { margin: 0; }
 .videos .videothumb .thumb { width: 364px; height: 204px; margin-bottom: 26px; }
 .videos .videothumb .title { width: 363px; text-align: center; font: normal 16px Helvetica; color: #000000; text-transform: uppercase; font-family: "TGBC20"; }
-.videos .videothumb .title span { font-family: "TGBCO18"; }
+.videos .videothumb .title .it { font-family: "TGBCO18"; }
+.videos .videothumb .title .plain { font-family: "TGBC18"; }
 .videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 0px; opacity: 0;
    -webkit-transition:all .100s ease-in;  
    -moz-transition:all .1s ease-in;  
