@@ -90,11 +90,14 @@ img { display: block; }
 .player-wrapper .player { z-index: 100; width: 1300px; height: 608px; overflow: hidden; margin: 0 auto; position: relative; }
 .player-wrapper .player .video-wrapper { background-color: #000000; position: absolute; top: 79px; right: 77px; width: 804px; height: 453px; }
 .player-wrapper .player .close { cursor: pointer; position: absolute; top: 19px; right: 21px; width: 33px; height: 33px; background: url("../img/player/close.png") top left no-repeat; }
-.player-wrapper .player .title { opacity: 0; position: absolute; top: 272px; left: 59px; width: 294px; text-align: center; color: #FFFFFF; }
+.player-wrapper .player .title { opacity: 0; position: absolute; top: 272px; left: 59px; width: 294px; text-align: center; color: #FFFFFF; z-index: 2; }
 .player-wrapper .player .title .main { font-family: "TGBC20"; font-size: 32px; }
 .player-wrapper .player .title .sub { font-family: "TGBCO18"; font-size: 26px; font-weight: normal; }
-.player-wrapper .player .role { opacity: 0; position: absolute; top: 347px; left: 59px; width: 294px; text-align: center; color: #000000; font-family: "TGBC20"; font-size: 18px; }
+.player-wrapper .player .role { opacity: 0; position: absolute; top: 360px; left: 59px; width: 294px; text-align: center; color: #000000; font-family: "TGBC20"; font-size: 18px; z-index: 2; }
 .player-wrapper .player .role p { padding: 7px 50px 2px 50px; background-color: #FFFFFF; display: inline; }
+
+.player-wrapper .player .rolebgtop { position: absolute; top: 332px; left: -20px; width: 462px; height: 1px;  opacity: 0.2; z-index: 1; background: url('../img/player/rolebgtop.png') top left no-repeat; }
+.player-wrapper .player .rolebgbottom { position: absolute; top: 333px; left: -20px; width: 462px; height: 142px;  opacity: 0.7; z-index: 1; background: url('../img/player/rolebgbottom.png') top left no-repeat; }
 
 /*
 	Footer
