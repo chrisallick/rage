@@ -14,33 +14,35 @@ video_data = {
     :roles => [{
         :role => "EDITOR",
         :videos => [
-            "61212088",
-            "61212089",
-            "61212090",
-            "65181084",
-            "64667737",
-            "65181087",
-            "65181088",
-            "65594554",
-            "65594555",
-            "67900225",
-            "67900226",
-            "67906978",
-            "67906979",
-            "67906982",
-            "67906983",
-            "67909282",
-            "67909283",
-            "67909284",
-            "67909285",
-            "67900224",
-            "67909286",
+            "61212088", # jon hopkins
+            "61212089", # google plus
+            "61212090", # hackensack UMC
+            "64667737", # epstein old ime
+            "65181084", # hackensack umc there is a place
+            "65181087", # ppl birds
+            "65181088", # pomellato
+            "65594554", # yves geleyn colosse
+            "65594555", # chobani snow angels
+            "67900224", # guilherem marcondes           
+            "67900225", # bbc bbc6 music
+            "67900226", # julia pott
+            "67906978", # british gas necta
+            "67906979", # brtiish gas parachutes
+            "67906982", # british gas upside down
+            "67906983", # colgate spasce trip
+            "67909282", # british gas rescue
+            "67909283", # ge ecomagination
+            "67909284", # infotel bear
+            "67909285", # infotel chef
+            "67909286", # infotel fan
             "68253601",
             "68253602",
             "68253604",
             "68253608",
             "68255250",
+            "68255251", # british gas callback
             "68258983",
+            "68258980", # confused.com
             "68258985",
             "68258986",
             "68258987",
@@ -56,22 +58,28 @@ video_data = {
             "68262239",
             "68266279",
             "68266280",
-            "68266281"
+            "68266281",
+            "70420546", # uncle bens take off
+            "70420547",
+            "70420553",
+            "70420554",
+            "70420555"  # uncle bens finger walk
+
         ]
     }, {
         :role => "COLORIST",
         :videos => [
-            "65181082",
-            "65181544",
-            "65575797",
-            "65575798",
-            "65575799",
-            "65575800",
-            "65575801",
-            "65594557",
-            "67254716",
-            "67254717",
-            "67900223"
+            "65181082", # hbo east main
+            "65181544", # canon eos
+            "65575797", # intel ultrabook paris
+            "65575798", # intel ultrabook sf
+            "65575799", # the metermaids
+            "65575800", # peelander z
+            "65575801", # hbo east of main 2010
+            "65594557", # twisted sister
+            "67254716", # hbo east of main
+            "67254717", # hbo east of main
+            "67900223"  # hbo east of main
         ]
     }, {
         :role => "DIRECTOR",
@@ -81,14 +89,16 @@ video_data = {
     }, {
         :role => "CINEMATOGRAPHER",
         :videos => [
-            "64667738"
+            "64569098", # survival tragedy of mind
+            "64667738", # helado negro
+            "70576792"  # willi patton - monk fish
         ]
     }, {
         :role => "TECHNICAL DIRECTOR",
         :videos => [
-            "65594556",
-            "67910049",
-            "67910050"
+            "65594556", # royal caribbean
+            "67910049", # usa
+            "67910050"  # usa
         ]
     }]
 }
