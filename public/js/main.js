@@ -8,8 +8,13 @@ attach_clicks = function() {
 			players[currentPlayer].api("unload");
 		}
 
-		$("#backtotop").fadeIn();
-		$(this).parents(".player-wrapper").css({
+		if( $(document).scrollTop()/$(document).height()*100 > 40 ) {
+			$("#backtotop").fadeIn();
+		} else {
+			$("#backtotop").fadeOut();
+		}
+
+		$(this).parents(".player-wrapper").removeClass("playing-now").css({
 			height: 0
 		});	
 	});
@@ -33,7 +38,6 @@ attach_clicks = function() {
 			}).removeClass("playing-now");			
 		}
 
-
 		currentSubNav = "";
 		$("#subnavs").removeClass().addClass("closed");
 		$("#closeheader").fadeOut("fast");
@@ -52,7 +56,7 @@ attach_clicks = function() {
   		$(".title", player).html( "<p class='main'>"+main_title+"</p><p class='sub'>" + sub_title + "</p>" );
   		$(".video-wrapper", player).html('<iframe id="player'+row+'"" src="'+src+'" width="804" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
 
-  		$("#backtotop").fadeOut();
+		$("#backtotop").fadeOut();
 
 		var fired = false;
 		if( row == 19 || row == 18 ) {
@@ -131,10 +135,6 @@ load_categories = function() {
 show_rows = function() {
 	$(".row").animate({
 		opacity: 1
-	}, function() {
-		$("#backtotop").animate({
-			opacity: 1
-		});
 	});
 }
 
@@ -162,10 +162,10 @@ setup_thumbs = function(wait) {
 		}
 	});
 	if(wait){
-					attach_clicks();
+		attach_clicks();
 
-			show_rows();
-		}
+		show_rows();
+	}
 }
 
 var iframe, players = new Array();
@@ -253,7 +253,7 @@ $(document).ready(function() {
 	$("#backtotop").click(function(){
 		$("body,html").animate({
 			scrollTop: 0
-		})
+		});
 	});
 
 	$(window).scroll(function(){
@@ -262,6 +262,12 @@ $(document).ready(function() {
 		$("#closeheader").fadeOut("fast");
 		$(".subnav").fadeOut("fast");
 		$("#subnavswrapper").slideUp("fast");
+
+		if( $(document).scrollTop()/$(document).height()*100 > 40 && $(".playing-now").length == 0 ) {
+			$("#backtotop").fadeIn();
+		} else {
+			$("#backtotop").fadeOut();
+		}
 	});
 
 });

@@ -13,7 +13,7 @@ img { display: block; }
 /*
 	Back to top
 */
-#backtotop { cursor: pointer; position: fixed; right: 0px; top: 50%; margin-top: -51px; z-index: 10000; opacity: 0; }
+#backtotop { cursor: pointer; position: fixed; right: 0px; top: 50%; margin-top: -51px; z-index: 10000; display: none; }
 
 /*
 	Header
