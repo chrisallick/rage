@@ -59,10 +59,10 @@ attach_clicks = function() {
 				$(player).delay(500).animate({
 					height: 608
 				}, function() {
-					$(".role", player).animate({
+					$(".role", player).delay(100).animate({
 						opacity: 1
 					});
-					$(".title", player).animate({
+					$(".title", player).delay(100).animate({
 						opacity: 1
 					});
 					if( !fired ) {
@@ -89,10 +89,10 @@ attach_clicks = function() {
 				$(player).animate({
 					height: 608
 				}, function() {
-					$(".role", player).animate({
+					$(".role", player).delay(100).animate({
 						opacity: 1
 					});
-					$(".title", player).animate({
+					$(".title", player).delay(100).animate({
 						opacity: 1
 					});
 					if( !fired ) {
@@ -115,7 +115,6 @@ attach_clicks = function() {
 }
 
 $(window).load(function(){
-	//console.log("loaded");
 	attach_clicks();
 });
 
