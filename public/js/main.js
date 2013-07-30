@@ -15,6 +15,7 @@ attach_clicks = function() {
 		}
 
 		$(this).siblings(".title").fadeOut();
+		$(this).siblings(".video-wrapper").fadeOut();
 		$(this).siblings(".role").fadeOut(function(){
 			$(this).parents(".player-wrapper").removeClass("playing-now").delay(100).animate({
 				height: 0
