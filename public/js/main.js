@@ -14,9 +14,12 @@ attach_clicks = function() {
 			$("#backtotop").fadeOut();
 		}
 
-		$(this).parents(".player-wrapper").removeClass("playing-now").css({
-			height: 0
-		});	
+		$(this).siblings(".title").fadeOut();
+		$(this).siblings(".role").fadeOut(function(){
+			$(this).parents(".player-wrapper").removeClass("playing-now").delay(100).animate({
+				height: 0
+			});
+		});
 	});
 
 	$(".videothumb").click(function() {
@@ -35,7 +38,7 @@ attach_clicks = function() {
 				height: 0
 			}, 250, function() {
 
-			}).removeClass("playing-now");			
+			}).removeClass("playing-now");
 		}
 
 		currentSubNav = "";
