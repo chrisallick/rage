@@ -127,7 +127,8 @@ $(window).load(function(){
 });
 
 load_categories = function() {
-	var q = "/categories?cats="+categories.join(",");
+	//var q = "/categories?cats="+categories.join(",");
+	var q = "/categories?cats="+category;
 	$.get(q,function(data){
 		$("#wrapper").html(data).ready(function(){
 			players = [];
@@ -176,7 +177,7 @@ var iframe, players = new Array();
 var playing = false;
 var currentPlayer = -1;
 var currentSubNav = "";
-var categories = new Array();
+var category = "";
 $(document).ready(function() {
 
 	setTimeout(function(){
@@ -200,13 +201,12 @@ $(document).ready(function() {
 	$("#categories li").click(function(event){
 		if( $(this).hasClass("on") ) {
 			$(this).removeClass("on");
-			var index = categories.indexOf($(this).data("role"));
-			if (index !== -1) {
-			    categories.splice(index, 1);
-			}
+			// 
 		} else {
+			$("#categories .on").removeClass("on");
 			$(this).addClass("on");
-			categories.push($(this).data("role"));
+			//categories.push($(this).data("role"));
+			category = $(this).data("role");
 		}
 
 		load_categories();

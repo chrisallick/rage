@@ -69,7 +69,7 @@ img { display: block; }
 .videos .videothumb .title .it { font-family: "TGBCO18"; }
 .videos .videothumb .title .plain { font-family: "TGBC18"; }
 .videos .videothumb .whitebox { position: absolute; top: 0px; left: 0px; width: 364px; height: 204px; opacity: 0; background-color: #FFFFFF; }
-.videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 0px; opacity: 0;
+.videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 204px; opacity: 0;
 	-webkit-transition:all .1s ease-in;  
 	-moz-transition:all .1s ease-in;  
 	-o-transition:all .1s ease-in;  
@@ -81,8 +81,8 @@ img { display: block; }
 	-o-transition:all .2s ease-in;  
 	transition:all .2s ease-in;
 }
-.videos .videothumb:hover .overlay { opacity: 1; height: 204px;
-	-webkit-transition:all .200s ease-in;
+.videos .videothumb:hover .overlay { opacity: 1;
+	-webkit-transition:all .2s ease-in;
 	-moz-transition:all .2s ease-in;  
 	-o-transition:all .2s ease-in;  
 	transition:all .2s ease-in;
