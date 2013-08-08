@@ -2,13 +2,14 @@
 	Global
 */
 html, body { width: 100%; height: 100%; background-color: #FFFFFF; }
-img { display: block; }
 
 @font-face { font-family: 'TGBC20'; src: url('../font/TradeGothicLTStd-BdCn20.otf'); }
-@font-face { font-family: 'TGBCO20'; src: url('../font/TradeGothicLTStd-BdCn20Obl'); }
+@font-face { font-family: 'TGBCO20'; src: url('../font/TradeGothicLTStd-BdCn20Obl.otf'); }
 
 @font-face { font-family: 'TGBC18'; src: url('../font/TradeGothicLTStd-Cn18.otf'); }
 @font-face { font-family: 'TGBCO18'; src: url('../font/TradeGothicLTStd-Cn18Obl.otf'); }
+
+img { display: block; }
 
 /*
 	Back to top
@@ -54,6 +55,9 @@ img { display: block; }
 #categories ul li .plus { color: #F5F5F5; }
 #categories ul .on .plus { color: #4c4c4c; }
 #categories:hover ul { display: block; }
+
+#filter { width: 135px; height: 20px; background-color: #000000; }
+
 /*
 	Rows
 */
@@ -70,21 +74,21 @@ img { display: block; }
 .videos .videothumb .title .plain { font-family: "TGBC18"; }
 .videos .videothumb .whitebox { position: absolute; top: 0px; left: 0px; width: 364px; height: 204px; opacity: 0; background-color: #FFFFFF; }
 .videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 204px; opacity: 0;
-	-webkit-transition:all .1s ease-in;  
-	-moz-transition:all .1s ease-in;  
-	-o-transition:all .1s ease-in;  
-	transition:all .1s ease-in;  
+	-webkit-transition:all .1s ease-in;
+	-moz-transition:all .1s ease-in;
+	-o-transition:all .1s ease-in;
+	transition:all .1s ease-in;
 }
 .videos .videothumb:hover .whitebox { opacity: .4;
 	-webkit-transition:all .2s ease-in;
-	-moz-transition:all .2s ease-in;  
-	-o-transition:all .2s ease-in;  
+	-moz-transition:all .2s ease-in;
+	-o-transition:all .2s ease-in;
 	transition:all .2s ease-in;
 }
 .videos .videothumb:hover .overlay { opacity: 1;
 	-webkit-transition:all .2s ease-in;
-	-moz-transition:all .2s ease-in;  
-	-o-transition:all .2s ease-in;  
+	-moz-transition:all .2s ease-in;
+	-o-transition:all .2s ease-in;
 	transition:all .2s ease-in;
 }
 
