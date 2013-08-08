@@ -240,6 +240,7 @@ $(document).ready(function() {
 	$("#active-label").click(function(){
 		category = "";
 		$(this).hide();
+		$("#categories .on").removeClass("on");
 		load_categories(true);
 	});
 
