@@ -14,19 +14,19 @@ video_data = {
     :roles => [{
         :role => "EDITOR",
         :videos => [
-            "61212088", # jon hopkins
-            "61212089", # google plus
-            "61212090", # hackensack UMC
-            "64667737", # epstein old ime
+            "61212088", # jon hopkins immunity
+            "61212089", # google plus medley
+            "61212090", # hackensack UMC determination
+            "64667737", # epstein old time stars
             "65181084", # hackensack umc there is a place
             "65181087", # ppl birds
-            "65181088", # pomellato
+            "65181088", # pomellato i love you
             "65594554", # yves geleyn colosse
             "65594555", # chobani snow angels
-            "67900224", # guilherem marcondes           
+            "67900224", # guilherem marcondes the masters voice          
             "67900225", # bbc bbc6 music
-            "67900226", # julia pott
-            "67906978", # british gas necta
+            "67900226", # julia pott the event
+            "67906978", # british gas nectar
             "67906979", # brtiish gas parachutes
             "67906982", # british gas upside down
             "67906983", # colgate spasce trip
@@ -35,13 +35,14 @@ video_data = {
             "67909284", # infotel bear
             "67909285", # infotel chef
             "67909286", # infotel fan
-            "68253601",
-            "68253602",
-            "68253604",
-            "68253608",
-            "68255250",
+            "68253601", # google plus circles
+            "68253602", # google plus hangouts
+            "68253604", # google plus isntant upload
+            "68253608", # google plus sparks
+            "68255250", # google plus huddle
             "68255251", # british gas callback
-            "68258983",
+            "68255253", # british gas sherlock
+            "68258983", # confused.com blackbox
             "68258980", # confused.com
             "68258985",
             "68258986",
