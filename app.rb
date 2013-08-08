@@ -108,13 +108,14 @@ get '/categories' do
 
     vids = []
     video_data[:roles].each do |role|
-        if cats.include? role[:role]
+        if cats.include? role[:role] or cats == "all"
             role[:videos].each do |video|
                 vids.push({:role =>role[:role], :id => video})
             end
         end
-        
     end
+
+    puts vids
 
     erb :main, :layout => false, :locals => {
         :video_data => vids
