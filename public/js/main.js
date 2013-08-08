@@ -8,17 +8,18 @@ attach_clicks = function() {
 			players[currentPlayer].api("unload");
 		}
 
-		if( $(document).scrollTop()/$(document).height()*100 > 40 ) {
-			$("#backtotop").fadeIn();
-		} else {
-			$("#backtotop").fadeOut();
-		}
-
 		$(this).siblings(".title").fadeOut();
+		$(this).siblings(".rolebgtop").fadeOut();
 		$(this).siblings(".video-wrapper").fadeOut();
 		$(this).siblings(".role").fadeOut(function(){
 			$(this).parents(".player-wrapper").removeClass("playing-now").delay(100).animate({
 				height: 0
+			}, function() {
+				if( $(document).scrollTop()/$(document).height()*100 > 18 ) {
+					$("#backtotop").fadeIn();
+				} else {
+					$("#backtotop").fadeOut();
+				}
 			});
 		});
 	});
@@ -70,9 +71,15 @@ attach_clicks = function() {
 					$(".role", player).delay(100).animate({
 						opacity: 1
 					});
+
 					$(".title", player).delay(100).animate({
 						opacity: 1
 					});
+
+					$(".rolebgtop", player).delay(100).animate({
+						"opacity": "0.2"
+					});
+					
 					if( !fired ) {
 						fired = true;
 
@@ -102,6 +109,9 @@ attach_clicks = function() {
 					});
 					$(".title", player).delay(100).animate({
 						opacity: 1
+					});
+					$(".rolebgtop", player).delay(100).animate({
+						"opacity": "0.2"
 					});
 					if( !fired ) {
 						fired = true;
@@ -267,6 +277,21 @@ $(document).ready(function() {
 		}
 	});
 
+	$("#navwrapper .projects").click(function(event){
+		event.preventDefault();
+		currentSubNav = "";
+		$("#subnavs").removeClass().addClass("closed");
+		$("#closeheader").fadeOut("fast");
+		$(".subnav").fadeOut("fast");
+		$("#subnavswrapper").slideUp("fast" );
+
+		$("body,html").animate({
+			scrollTop: 0
+		}, function(){
+			load_categories(true);
+		});
+	});
+
 	$("#closeheader").click(function() {
 		currentSubNav = "";
 		$("#subnavs").removeClass().addClass("closed");
@@ -288,7 +313,7 @@ $(document).ready(function() {
 		$(".subnav").fadeOut("fast");
 		$("#subnavswrapper").slideUp("fast");
 
-		if( $(document).scrollTop()/$(document).height()*100 > 40 && $(".playing-now").length == 0 ) {
+		if( $(document).scrollTop()/$(document).height()*100 > 18 && $(".playing-now").length == 0 ) {
 			$("#backtotop").fadeIn();
 		} else {
 			$("#backtotop").fadeOut();
