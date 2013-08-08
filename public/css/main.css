@@ -82,7 +82,7 @@ img { display: block; }
 	-o-transition:all .1s ease-in;
 	transition:all .1s ease-in;
 }
-.videos .videothumb:hover .whitebox { opacity: .4;
+.videos .videothumb:hover .whitebox { opacity: .5;
 	-webkit-transition:all .2s ease-in;
 	-moz-transition:all .2s ease-in;
 	-o-transition:all .2s ease-in;

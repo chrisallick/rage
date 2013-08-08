@@ -272,7 +272,7 @@ $(document).ready(function() {
 		$("#subnavs").removeClass().addClass("closed");
 		$("#closeheader").fadeOut("fast");
 		$(".subnav").fadeOut("fast");
-		$("#subnavswrapper").slideUp("fast");
+		$("#subnavswrapper").slideUp("fast" );
 	});
 
 	$("#backtotop").click(function(){
