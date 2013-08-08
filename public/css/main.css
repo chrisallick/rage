@@ -22,7 +22,7 @@ img { display: block; }
 #header { width: 100%; background: #FFFFFF; position: fixed; top: 0px; z-index: 1000;}
 #header #navwrapper { position: relative; opacity: 0; width: 1136px; height: 106px; background: url("../img/logo.png") top left no-repeat; background-position: center; margin: 0 auto; }
 #header #navwrapper .nav { opacity: 0; margin: 0 auto; width: 883px; padding-top: 35px; padding-left: 254px;  }
-#header #navwrapper .nav a { float: left; font: normal 14px 'TGBC18'; }
+#header #navwrapper .nav a { float: left; font: normal 13px 'TGBC18'; opacity: .7; }
 #header #navwrapper .nav .projects { margin-right: 83px; }
 #header #navwrapper .nav .openabout { margin-right: 264px; }
 #header #navwrapper .nav .opencontact { margin-right: 56px; }
