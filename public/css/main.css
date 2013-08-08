@@ -72,9 +72,9 @@ img { display: block; }
 .videos .videothumb { width: 363px; height: 250px; float: left; margin-right: 25px; position: relative; }
 .videos .last { margin: 0; }
 .videos .videothumb .thumb { width: 364px; height: 204px; margin-bottom: 26px; }
-.videos .videothumb .title { width: 363px; text-align: center; font: normal 16px Helvetica; color: #000000; text-transform: uppercase; font-family: "TGBC20"; }
-.videos .videothumb .title .it { font-family: "TGBCO18"; }
-.videos .videothumb .title .plain { font-family: "TGBC18"; }
+.videos .videothumb .title { width: 363px; text-align: center; font: bold 16px "Roboto Condensed"; color: #000000; text-transform: uppercase; }
+.videos .videothumb .title .it { font-style: italic; font-weight: normal; }
+.videos .videothumb .title .plain { font-weight: normal; }
 .videos .videothumb .whitebox { position: absolute; top: 0px; left: 0px; width: 364px; height: 204px; opacity: 0; background-color: #FFFFFF; }
 .videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 204px; opacity: 0;
 	-webkit-transition:all .1s ease-in;
