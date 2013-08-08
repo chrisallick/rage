@@ -207,6 +207,8 @@ $(document).ready(function() {
 			$(this).addClass("on");
 			//categories.push($(this).data("role"));
 			category = $(this).data("role");
+			$("#active-label p").text(category);
+			$("#active-label").show();
 		}
 
 		load_categories();

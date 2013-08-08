@@ -42,11 +42,14 @@ img { display: block; }
 	CATEGORIES
 */
 
+#active-label { cursor: pointer; height: 20px; position: absolute; bottom: 54px; right: 100px; background: url("../img/labelclose.png") top left no-repeat; padding-left: 24px; display: none; }
+#active-label p { padding: 4px 6px 2px 6px; background-color: #333333; color: #FFFFFF; font: normal 12px 'TGBC18'; }
+
 #categories { width: 86px; height: 16px; position: absolute; bottom: 56px; right: 0px; z-index: 10000; cursor: pointer; font-family: 'TGBC20'; font-size: 13px; }
 #categories .categories-button { width: 100%; height: 100%; }
 #categories .categories-button img { position: absolute; top: 0px; left: 0px; width: 18px; height: 16px; }
 #categories .categories-button span { position: absolute; top: 4px; left: 29px; }
-#categories ul { display: none; position: absolute; top: 16px; right: -2px;  background-color: #FFFFFF; padding-top: 20px; width: 127px; }
+#categories ul { display: none; position: absolute; top: 18px; right: -2px;  background-color: #FFFFFF; padding-top: 18px; width: 127px; }
 #categories ul li { color: #858585; margin-bottom: 10px; font-family: 'TGBC20'; font-size: 13px; text-align: right; }
 #categories ul li p { position: relative; display: inline; }
 #categories ul li p:hover, #categories ul li p:hover span { color: #4c4c4c; }
