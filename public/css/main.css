@@ -53,7 +53,7 @@ img { display: block; }
 #categories ul li { color: #858585; margin-bottom: 10px; font-family: 'Roboto Condensed'; font-size: 13px; text-align: right; }
 #categories ul li p { position: relative; display: inline; }
 #categories ul li p:hover, #categories ul li p:hover span { color: #4c4c4c; }
-#categories ul li p span { position: absolute; left: -10px; top: -1px; }
+#categories ul li p span { position: absolute; left: -10px; top: 2px; }
 #categories ul .on { color: #4c4c4c; }
 #categories ul li .plus { color: #F5F5F5; }
 #categories ul .on .plus { color: #4c4c4c; }
