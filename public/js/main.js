@@ -33,13 +33,20 @@ attach_clicks = function() {
 
 		var row = $(this).parents(".row").data("index");
 
+		// unload anything
+		// collapse and unfold
+		// scroll
+		// load video
+
 		var player = $(".player-wrapper")[row];
 
 		if( currentPlayer != row ) {
-			$(".playing-now").css({
+			$(".playing-now").animate({
 				height: 0
-			}, 250, function() {
-
+			}, 100, function() {
+				$("body,html").animate({
+					scrollTop: $(player).offset().top - 115// - $(window).height()/2 + 250
+				});
 			}).removeClass("playing-now");
 		}
 
@@ -98,9 +105,9 @@ attach_clicks = function() {
 					});
 				});
 		} else {
-			$("body,html").delay(500).animate({
-				scrollTop: $(player).offset().top - 115// - $(window).height()/2 + 250
-			}, function() {
+			// $("body,html").delay(500).animate({
+			// 	scrollTop: $(player).offset().top - 115// - $(window).height()/2 + 250
+			// }, function() {
 				$(player).animate({
 					height: 608
 				}, function() {
@@ -127,7 +134,7 @@ attach_clicks = function() {
 						});
 					}				
 				});
-			});
+			//});
 		}
 	});
 }
