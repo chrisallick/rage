@@ -8,10 +8,14 @@ attach_clicks = function() {
 			players[currentPlayer].api("unload");
 		}
 
-		$(this).siblings(".title").fadeOut();
-		$(this).siblings(".rolebgtop").fadeOut();
-		$(this).siblings(".video-wrapper").fadeOut();
-		$(this).siblings(".role").fadeOut(function(){
+		// $(this).siblings(".title").fadeOut();
+		// $(this).siblings(".rolebgtop").fadeOut();
+		// $(this).siblings(".video-wrapper").fadeOut();
+		// $(this).siblings(".role").fadeOut();
+
+		$(this).parents(".player").animate({
+			opacity: 0
+		}, function() {
 			$(this).parents(".player-wrapper").removeClass("playing-now").delay(100).animate({
 				height: 0
 			}, function() {
@@ -20,7 +24,7 @@ attach_clicks = function() {
 				} else {
 					$("#backtotop").fadeOut();
 				}
-			});
+			});			
 		});
 	});
 
@@ -41,13 +45,19 @@ attach_clicks = function() {
 		var player = $(".player-wrapper")[row];
 
 		if( currentPlayer != row ) {
-			$(".playing-now").animate({
-				height: 0
-			}, 100, function() {
+			if( $(".playing-now").length > 0 ) {
+				$(".playing-now").animate({
+					height: 0
+				}, 100, function() {
+					$("body,html").animate({
+						scrollTop: $(player).offset().top - 115// - $(window).height()/2 + 250
+					});
+				}).removeClass("playing-now");
+			} else {
 				$("body,html").animate({
 					scrollTop: $(player).offset().top - 115// - $(window).height()/2 + 250
 				});
-			}).removeClass("playing-now");
+			}
 		}
 
 		currentSubNav = "";
@@ -62,7 +72,7 @@ attach_clicks = function() {
 		var src = "http://player.vimeo.com/video/"+$(this).data("id")+"?api=1&player_id=player"+row;
   		var role = $(this).data("role");
   		var main_title = $('.title .main', this).text().replace(" - ", "");
-  		if( !('.title .it', this).length ){
+  		if( ('.title .it', this).length == 0 ) {
 			var sub_title = $('.title .plain', this).text();
   		} else {
   			var sub_title = $('.title .it', this).text();	
@@ -80,16 +90,20 @@ attach_clicks = function() {
 				$(player).delay(500).animate({
 					height: 608
 				}, function() {
-					$(".role", player).delay(100).animate({
-						opacity: 1
-					});
+					// $(".role", player).delay(100).animate({
+					// 	opacity: 1
+					// });
 
-					$(".title", player).delay(100).animate({
-						opacity: 1
-					});
+					// $(".title", player).delay(100).animate({
+					// 	opacity: 1
+					// });
 
-					$(".rolebgtop", player).delay(100).animate({
-						"opacity": "0.2"
+					// $(".rolebgtop", player).delay(100).animate({
+					// 	"opacity": "0.2"
+					// });
+
+					$(".player",player).animate({
+						opacity: 1
 					});
 					
 					if( !fired ) {
@@ -119,27 +133,30 @@ attach_clicks = function() {
 					// $(".role", player).delay(100).animate({
 					// 	opacity: 1
 					// });
-					$(".role", player).delay(100).css({
-						opacity: 0,
-						display: "block"
-					}).animate({
+					// $(".role", player).delay(100).css({
+					// 	opacity: 0,
+					// 	display: "block"
+					// }).animate({
+					// 	opacity: 1
+					// });
+					// $(".title", player).delay(100).css({
+					// 	opacity: 0,
+					// 	display: "block"
+					// }).animate({
+					// 	opacity: 1
+					// });
+					// $(".rolebgtop", player).delay(100).css({
+					// 	opacity: 0,
+					// 	display: "block"
+					// }).animate({
+					// 	"opacity": "0.2"
+					// });
+
+					// $(".video-wrapper", player).show();
+					$(".player",player).animate({
 						opacity: 1
-					});
-					$(".title", player).delay(100).css({
-						opacity: 0,
-						display: "block"
-					}).animate({
-						opacity: 1
-					});
-					$(".rolebgtop", player).delay(100).css({
-						opacity: 0,
-						display: "block"
-					}).animate({
-						"opacity": "0.2"
 					});
 
-					$(".video-wrapper", player).show();
-					
 					if( !fired ) {
 						fired = true;
 
