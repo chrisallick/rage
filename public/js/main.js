@@ -173,12 +173,16 @@ setup_thumbs = function(wait) {
 			$.getJSON('http://vimeo.com/api/oembed.json?url=http%3A//vimeo.com/'+vid+'&width=804&callback=?', {format: "json"}, function(data) {
 				if( data.title ) {
 					var title = data.title.split("\"");
-					var new_title = ""
+					var new_title = "";
 					if( title.length == 3 )  {
 						new_title = "<span class='main'>" + title[0] + "</span><span class='it'>" + title[1] + "</span><span class='plain'>" + title[2] + "</span>";
-						
-					} else {
-						new_title = data.title;
+					} else if( title.length == 1 ) {
+						title = data.title.split("-")
+						if( title.length == 1 ) {
+							new_title = data.title;	
+						} else {
+							new_title = "<span class='main'>" + title[0] + "</span> - <span class='plain'>" + title[1] + "</span>";
+						}
 					}
 					$(".title", value).html(new_title);
 				}
