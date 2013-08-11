@@ -62,7 +62,12 @@ attach_clicks = function() {
 		var src = "http://player.vimeo.com/video/"+$(this).data("id")+"?api=1&player_id=player"+row;
   		var role = $(this).data("role");
   		var main_title = $('.title .main', this).text().replace(" - ", "");
-  		var sub_title = $('.title .it', this).text();
+  		if( !('.title .it', this).length ){
+			var sub_title = $('.title .plain', this).text();
+  		} else {
+  			var sub_title = $('.title .it', this).text();	
+  		}
+  		
   		
   		$(".role", player).html( "<p>"+role+"</p>" );
   		$(".title", player).html( "<p class='main'>"+main_title+"</p><p class='sub'>" + sub_title + "</p>" );
@@ -111,15 +116,30 @@ attach_clicks = function() {
 				$(player).animate({
 					height: 608
 				}, function() {
-					$(".role", player).delay(100).animate({
+					// $(".role", player).delay(100).animate({
+					// 	opacity: 1
+					// });
+					$(".role", player).delay(100).css({
+						opacity: 0,
+						display: "block"
+					}).animate({
 						opacity: 1
 					});
-					$(".title", player).delay(100).animate({
+					$(".title", player).delay(100).css({
+						opacity: 0,
+						display: "block"
+					}).animate({
 						opacity: 1
 					});
-					$(".rolebgtop", player).delay(100).animate({
+					$(".rolebgtop", player).delay(100).css({
+						opacity: 0,
+						display: "block"
+					}).animate({
 						"opacity": "0.2"
 					});
+
+					$(".video-wrapper", player).show();
+					
 					if( !fired ) {
 						fired = true;
 
