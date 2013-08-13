@@ -2,16 +2,12 @@
 attach_clicks = function() {
 
 	$(".player-wrapper .close").click(function() {
-		playing = false;
-
-		if( players && players[currentPlayer] && players[currentPlayer].api ) {
-			players[currentPlayer].api("unload");
+		if( playing ) {
+			//vapi.api("pause");
+			$(".playing-now .video-wrapper").html("");
 		}
 
-		// $(this).siblings(".title").fadeOut();
-		// $(this).siblings(".rolebgtop").fadeOut();
-		// $(this).siblings(".video-wrapper").fadeOut();
-		// $(this).siblings(".role").fadeOut();
+		playing = false;
 
 		$(this).parents(".player").animate({
 			opacity: 0
@@ -29,10 +25,9 @@ attach_clicks = function() {
 	});
 
 	$(".videothumb").click(function() {
-		for( var i = 0,len = players.length; i < len; i++ ) {
-			if( players[i] && players[i].api ) {
-				players[i].api("unload");
-			}
+		if( playing ) {
+			//vapi.api("pause");
+			$(".playing-now .video-wrapper").html("");
 		}
 
 		var row = $(this).parents(".row").data("index");
@@ -78,101 +73,23 @@ attach_clicks = function() {
   			var sub_title = $('.title .it', this).text();	
   		}
   		
-  		
   		$(".role", player).html( "<p>"+role+"</p>" );
   		$(".title", player).html( "<p class='main'>"+main_title+"</p><p class='sub'>" + sub_title + "</p>" );
-  		$(".video-wrapper", player).html('<iframe id="player'+row+'"" src="'+src+'" width="804" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
+  		//$(".video-wrapper", player).html('<iframe id="player'+row+'"" src="'+src+'&autoplay=1" width="804" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
 
 		$("#backtotop").fadeOut();
 
-		var fired = false;
-		if( row == 19 || row == 18 ) {
-				$(player).delay(500).animate({
-					height: 608
-				}, function() {
-					// $(".role", player).delay(100).animate({
-					// 	opacity: 1
-					// });
+		playing = true;
+		currentPlayer = row;
 
-					// $(".title", player).delay(100).animate({
-					// 	opacity: 1
-					// });
-
-					// $(".rolebgtop", player).delay(100).animate({
-					// 	"opacity": "0.2"
-					// });
-
-					$(".player",player).animate({
-						opacity: 1
-					});
-					
-					if( !fired ) {
-						fired = true;
-
-						iframe = $("iframe", player)[0];
-						players[row] = $f(iframe);
-						players[row].addEvent('ready', function() {
-							if( players[row] && players[row].api ) {
-								players[row].api("play");
-								currentPlayer = row;
-								playing = true;								
-							}
-						});
-					}
-					$("body,html").animate({
-						scrollTop: $(player).offset().top - $(window).height()/2 + 250
-					});
-				});
-		} else {
-			// $("body,html").delay(500).animate({
-			// 	scrollTop: $(player).offset().top - 115// - $(window).height()/2 + 250
-			// }, function() {
-				$(player).animate({
-					height: 608
-				}, function() {
-					// $(".role", player).delay(100).animate({
-					// 	opacity: 1
-					// });
-					// $(".role", player).delay(100).css({
-					// 	opacity: 0,
-					// 	display: "block"
-					// }).animate({
-					// 	opacity: 1
-					// });
-					// $(".title", player).delay(100).css({
-					// 	opacity: 0,
-					// 	display: "block"
-					// }).animate({
-					// 	opacity: 1
-					// });
-					// $(".rolebgtop", player).delay(100).css({
-					// 	opacity: 0,
-					// 	display: "block"
-					// }).animate({
-					// 	"opacity": "0.2"
-					// });
-
-					// $(".video-wrapper", player).show();
-					$(".player",player).animate({
-						opacity: 1
-					});
-
-					if( !fired ) {
-						fired = true;
-
-						iframe = $("iframe", player)[0];
-						players[row] = $f(iframe);
-						players[row].addEvent('ready', function() {
-							if( players[row] && players[row].api ) {
-								players[row].api("play");
-								currentPlayer = row;
-								playing = true;								
-							}
-						});
-					}				
-				});
-			//});
-		}
+		$(player).animate({
+			height: 608
+		}, function() {
+			$(".video-wrapper", player).html('<iframe id="player'+row+'"" src="'+src+'&autoplay=1" width="804" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
+			$(".player",player).animate({
+				opacity: 1
+			});			
+		});
 	});
 }
 
@@ -244,7 +161,8 @@ setup_thumbs = function(wait) {
 	}
 }
 
-var iframe, players = new Array();
+var iframe
+var vapi;
 var playing = false;
 var currentPlayer = -1;
 var currentSubNav = "";
