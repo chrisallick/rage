@@ -168,11 +168,10 @@ var currentPlayer = -1;
 var currentSubNav = "";
 var category = "";
 $(document).ready(function() {
-
 	setTimeout(function(){
-		$("body,html").animate({
+		$("body,html").css({
 			scrollTop: 0
-		}, 100);
+		});
 	}, 10);
 
 	setup_thumbs();
