@@ -26,7 +26,7 @@ img { display: block; }
 #header { width: 100%; background: #FFFFFF; position: fixed; top: 0px; z-index: 1000;}
 #header #navwrapper { position: relative; opacity: 0; width: 1136px; height: 106px; background: url("../img/logo.png") top left no-repeat; background-position: center; margin: 0 auto; }
 #header #navwrapper .nav { opacity: 0; margin: 0 auto; width: 883px; padding-top: 35px; padding-left: 254px;  }
-#header #navwrapper .nav a { float: left; font: normal 14px 'NGB'; opacity: .7; font-weight: 700; letter-spacing: 1px; }
+#header #navwrapper .nav a { float: left; font: normal 14px 'NGB'; opacity: .7; font-weight: 700; }
 #header #navwrapper .nav .projects { margin-right: 42px; }
 #header #navwrapper .nav .openabout { margin-right: 246px; }
 #header #navwrapper .nav .opencontact { margin-right: 56px; }
@@ -69,13 +69,13 @@ img { display: block; }
 */
 
 #active-label { z-index: 1001; cursor: pointer; height: 20px; position: absolute; bottom: 54px; right: 100px; background: url("../img/labelclose.png") top left no-repeat; padding-left: 24px; display: none; }
-#active-label p { padding: 2px 6px 2px 6px; background-color: #333333; color: #FFFFFF; font: normal 12px 'NGN'; letter-spacing: 1px; }
+#active-label p { padding: 2px 6px 2px 6px; background-color: #333333; color: #FFFFFF; font: normal 12px 'NGN'; }
 
 #categories { width: 86px; height: 16px; position: absolute; bottom: 56px; right: 0px; z-index: 1000; cursor: pointer; font-family: 'NGB'; font-size: 13px; }
 #categories .categories-button { width: 100%; height: 100%; }
 #categories .categories-button img { position: absolute; top: 0px; left: 0px; width: 18px; height: 16px; }
-#categories .categories-button span { position: absolute; top: 1px; left: 29px; font-weight: 700; font-size: 14px; letter-spacing: 1px; opacity: .7; }
-#categories ul { display: none; position: absolute; top: 16px; right: -54px;  background-color: #FFFFFF; padding-top: 18px; width: 137px; }
+#categories .categories-button span { position: absolute; top: 1px; left: 29px; font-weight: 700; font-size: 14px; opacity: .7; }
+#categories ul { display: none; position: absolute; top: 16px; right: -43px;  background-color: #FFFFFF; padding-top: 18px; width: 137px; }
 #categories ul li { color: #858585; margin-bottom: 10px; font-family: 'NGN'; font-size: 12px; text-align: right; }
 #categories ul li p { position: relative; display: inline; }
 #categories ul li p:hover, #categories ul li p:hover span { color: #4c4c4c; }
@@ -147,9 +147,9 @@ img { display: block; }
 #footer, .push { height: 62px; }
 #footer .nav { height: 62px; margin: 0 auto; width: 1137px; background: #000000 url("../img/logoFooter.png") top left no-repeat; background-position: center;  }
 
-#footer .nav a, #footer .nav p { float: left; font-family: 'NGN'; font-size: 13px; letter-spacing: 1px; }
+#footer .nav a, #footer .nav p { float: left; font-family: 'NGN'; font-size: 13px;  }
 #footer .nav .email { padding-top: 27px; margin-right: 105px; color: #FFFFFF; }
-#footer .nav .number { padding-top: 27px; float: left; margin-right: 339px; color: #FFFFFF; }
+#footer .nav .number { padding-top: 27px; float: left; margin-right: 390px; color: #FFFFFF; }
 #footer .nav .copyright { padding-top: 27px; float: left; margin-right: 171px; color: #FFFFFF; }
 
 #footer .nav .vimeo { float: left; margin-right: 14px; }
