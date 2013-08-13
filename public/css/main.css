@@ -131,10 +131,10 @@ img { display: block; }
 .player-wrapper .player { z-index: 100; width: 1300px; height: 608px; overflow: hidden; margin: 0 auto; position: relative; opacity: 0; }
 .player-wrapper .player .video-wrapper { background-color: #000000; position: absolute; top: 79px; right: 77px; width: 804px; height: 453px; }
 .player-wrapper .player .close { cursor: pointer; position: absolute; top: 39px; right: 74px; width: 93px; height: 26px; background: url("../img/player/close.png") top left no-repeat; }
-.player-wrapper .player .title { /*opacity: 0;*/ position: absolute; top: 264px; left: 59px; width: 294px; text-align: center; color: #FFFFFF; z-index: 2; text-transform: uppercase; }
-.player-wrapper .player .title .main { font-family: "NGB"; font-size: 26px; margin-bottom: 2px; }
+.player-wrapper .player .title { /*opacity: 0;*/ position: absolute; top: 267px; left: 59px; width: 294px; text-align: center; color: #FFFFFF; z-index: 2; text-transform: uppercase; }
+.player-wrapper .player .title .main { font-family: "NGB"; font-size: 26px; margin-bottom: 7px; }
 .player-wrapper .player .title .sub { font-family: "NGO"; font-size: 20px; font-weight: normal; font-style: italic; }
-.player-wrapper .player .role { /*opacity: 0;*/ position: absolute; top: 358px; left: 59px; width: 294px; text-align: center; color: #000000; font-family: "NGB"; font-size: 16px; z-index: 2; font-weight: 700; }
+.player-wrapper .player .role { /*opacity: 0;*/ position: absolute; top: 356px; left: 59px; width: 294px; text-align: center; color: #000000; font-family: "NGB"; font-size: 16px; z-index: 2; font-weight: 700; }
 .player-wrapper .player .role p { padding: 3px 18px 3px 18px; background-color: #FFFFFF; display: inline; }
 
 .player-wrapper .player .rolebgtop { position: absolute; top: 332px; left: -20px; width: 462px; height: 1px; z-index: 1; background: url('../img/player/rolebgtop.png') top left no-repeat; opacity: 0.2; }
