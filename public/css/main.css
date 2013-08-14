@@ -13,6 +13,20 @@ html, body { width: 100%; height: 100%; background-color: #FFFFFF; }
 @font-face { font-family: 'NGB'; src: url('../font/6856.ttf'); }
 @font-face { font-family: 'NGO'; src: url('../font/6789.ttf'); }
 
+/*font-family:'Trade Gothic W01 Bold';
+font-family:'Trade Gothic W01 Light';
+font-family:'TradeGothicW01-LightObl';
+font-family:'Trade Gothic W01 Roman';
+font-family:'Trade Gothic W01 Obl';
+font-family:'TradeGothicW01-BoldObl';
+font-family:'Trade Gothic W01 Bold 2';
+font-family:'TradeGothicW01-Bold2Obl';
+font-family:'Trade Gothic W01 Cn 18';
+font-family:'TradeGothicW01-Cn18Obl';
+font-family:'TradeGothicW01-BoldCn20 675334';
+font-family:'TradeGothicW01-BoldCn20 675337';*/
+
+
 img { display: block; }
 
 /*
@@ -26,42 +40,41 @@ img { display: block; }
 #header { width: 100%; background: #FFFFFF; position: fixed; top: 0px; z-index: 1000;}
 #header #navwrapper { position: relative; opacity: 0; width: 1136px; height: 106px; background: url("../img/logo.png") top left no-repeat; background-position: center; margin: 0 auto; }
 #header #navwrapper .nav { opacity: 0; margin: 0 auto; width: 883px; padding-top: 35px; padding-left: 254px;  }
-#header #navwrapper .nav a { float: left; font: normal 14px 'NGB'; opacity: .7; font-weight: 700; }
+#header #navwrapper .nav a { float: left; font-size: 14px;font-family:'Trade Gothic W01 Bold'; opacity: .7; font-weight: 700; }
 #header #navwrapper .nav .projects { margin-right: 42px; }
 #header #navwrapper .nav .openabout { margin-right: 246px; }
 #header #navwrapper .nav .opencontact { margin-right: 56px; }
 #header #subnavswrapper { width: 100%; height: 104px; background: #000000; display: none;  }
 #header #subnavswrapper #subnavs { width: 1137px; height: 104px; position: relative; margin: 0 auto; }
 #header #subnavswrapper #subnavs .about { position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; padding-top: 19px; display: none; }
-#header #subnavswrapper #subnavs .about p { width: 370px; color: #FFFFFF; font-family: 'NGN'; font-size: 13px; line-height: 15px; }
+#header #subnavswrapper #subnavs .about p { width: 370px; color: #FFFFFF; font-family:'Trade Gothic W01 Bold'; font-size: 13px; line-height: 15px; }
 #header #subnavswrapper #subnavs .about .links { position: absolute; top: 30px; left: 512px; width: 150px; height: 40px; }
-#header #subnavswrapper #subnavs .about .links .flickr { float: left; margin-right: 16px; width: 24px; height: 62px; background: url('../img/flickrBtn.png') top left no-repeat; }
+#header #subnavswrapper #subnavs .about .links .flickr { margin-right: 16px; width: 24px; height: 62px; background: url('../img/flickrBtn.png') top left no-repeat; }
 #header #subnavswrapper #subnavs .about .links .flickr:hover { background-position: -24px 0px; }
+#header #subnavswrapper #subnavs .about .links .vimeo { width: 18px; height: 62px; background: url('../img/vimeoBtn.png') top left no-repeat; }
+#header #subnavswrapper #subnavs .about .links .vimeo:hover { background-position: -18px 0px; }
+#header #subnavswrapper #subnavs .about .links .imdb { width: 32px; height: 62px; background: url('../img/imdbBtn.png') top left no-repeat; }
+#header #subnavswrapper #subnavs .about .links .imdb:hover { background-position: -32px 0px; }
 #header #subnavswrapper #subnavs .about .links a { float: left; margin-right: 20px; }
 #header #subnavswrapper #subnavs .contact { position: absolute; width: 500px; height: 100%; top: 0px; left: 0px; padding-left: 255px; padding-top: 48px; display: none; font-family: 'NGN'; font-size: 12px; }
 #header #subnavswrapper #subnavs .contact .items .name { float: left; margin-right: 47px; color: #FFFFFF; }
 #header #subnavswrapper #subnavs .contact .items .number { float: left; margin-right: 24px; color: #FFFFFF; }
 #header #subnavswrapper #subnavs .contact .items .email { float: left; color: #FFFFFF; }
 
-#header #subnavswrapper #subnavs #closeheader { cursor: pointer; position: absolute; top: 45px; right: 0px; display: none; width: 65px; height: 10px; }
+#header #subnavswrapper #subnavs #closeheader { cursor: pointer; position: absolute; top: 56px; right: 0px; display: none; width: 65px; height: 10px; }
 #header #subnavswrapper #subnavs #closeheader p { position: absolute; top: 0px; left: 0px; color: #FFFFFF; font: 12px normal 'NGB'; text-transform: uppercase; }
 #header #subnavswrapper #subnavs #closeheader .arrow { position: absolute; bottom: -4px; right: 0px;
 	width: 0px; height: 0px;
 	border-left: 7px solid transparent;
 	border-right: 7px solid transparent;
 	border-bottom: 10px solid white;
-	-webkit-transition:-webkit-transform .2s linear;
-	-moz-transition:-webkit-transform .2s linear;
-	-o-transition:-webkit-transform .2s linear;
-	transition:-webkit-transform .2s linear;
 }
-#header #subnavswrapper #subnavs #closeheader:hover .arrow {
-	/*bottom: -3px;*/
-	-webkit-transform: rotateX(180deg);
-	-webkit-transition:-webkit-transform .2s linear;
-	-moz-transition:-webkit-transform .2s linear;
-	-o-transition:-webkit-transform .2s linear;
-	transition:-webkit-transform .2s linear;
+#header #subnavswrapper #subnavs #closeheader.closing .arrow {
+	-webkit-transform: rotate(180deg);
+	-webkit-transition:-webkit-transform .1s linear;
+	-moz-transition:-webkit-transform .1s linear;
+	-o-transition:-webkit-transform .1s linear;
+	transition:-webkit-transform .1s linear;
 }
 
 /*
@@ -90,7 +103,7 @@ img { display: block; }
 /*
 	Rows
 */
-#wrapper { width: 100%; padding-top: 185px; min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -62px; }
+#wrapper { width: 100%; padding-top: 185px; padding-bottom: 60px; min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -62px; }
 
 .row { width: 100%; opacity: 0; }
 
@@ -150,9 +163,13 @@ img { display: block; }
 #footer .nav a, #footer .nav p { float: left; font-family: 'NGN'; font-size: 13px;  }
 #footer .nav .email { padding-top: 27px; margin-right: 105px; color: #FFFFFF; }
 #footer .nav .number { padding-top: 27px; float: left; margin-right: 390px; color: #FFFFFF; }
-#footer .nav .copyright { padding-top: 27px; float: left; margin-right: 171px; color: #FFFFFF; }
+#footer .nav .copyright { padding-top: 27px; float: left; margin-right: 148px; color: #FFFFFF; }
 
 #footer .nav .vimeo { float: left; margin-right: 14px; }
 #footer .nav .flickr { float: left; margin-right: 16px; width: 24px; height: 62px; background: url('../img/flickrBtn.png') top left no-repeat; }
 #footer .nav .flickr:hover { background-position: -24px 0px; }
+#footer .nav .imdb { float: left; margin-right: 16px; width: 32px; height: 62px; background: url('../img/imdbBtn.png') top left no-repeat; }
+#footer .nav .imdb:hover { background-position: -32px 0px; }
+#footer .nav .vimeo { float: left; margin-right: 16px; width: 18px; height: 62px; background: url('../img/vimeoBtn.png') top left no-repeat; }
+#footer .nav .vimeo:hover { background-position: -18px 0px; }
 #footer .nav .imdb { float: left; }

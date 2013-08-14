@@ -261,7 +261,9 @@ $(document).ready(function() {
 	$("#closeheader").click(function() {
 		currentSubNav = "";
 		$("#subnavs").removeClass().addClass("closed");
-		$("#closeheader").fadeOut("fast");
+		$("#closeheader").addClass("closing").fadeOut("fast",function(){
+			$(this).removeClass("closing");
+		});
 		$(".subnav").fadeOut("fast");
 		$("#subnavswrapper").slideUp("fast" );
 	});
@@ -275,7 +277,9 @@ $(document).ready(function() {
 	$(window).scroll(function(){
 		currentSubNav = "";
 		$("#subnavs").removeClass().addClass("closed");
-		$("#closeheader").fadeOut("fast");
+				$("#closeheader").addClass("closing").fadeOut("fast",function(){
+			$(this).removeClass("closing");
+		});
 		$(".subnav").fadeOut("fast");
 		$("#subnavswrapper").slideUp("fast");
 
