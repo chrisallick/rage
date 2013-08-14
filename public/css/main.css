@@ -3,7 +3,7 @@
 */
 html, body { width: 100%; height: 100%; background-color: #FFFFFF; }
 
-@font-face { font-family: 'TGBC20'; src: url('../font/TradeGothicLTStd-BdCn20.otf'); }
+/*@font-face { font-family: 'TGBC20'; src: url('../font/TradeGothicLTStd-BdCn20.otf'); }
 @font-face { font-family: 'TGBCO20'; src: url('../font/TradeGothicLTStd-BdCn20Obl.otf'); }
 
 @font-face { font-family: 'TGBC18'; src: url('../font/TradeGothicLTStd-Cn18.otf'); }
@@ -11,7 +11,7 @@ html, body { width: 100%; height: 100%; background-color: #FFFFFF; }
 
 @font-face { font-family: 'NGN'; src: url('../font/6855.ttf'); }
 @font-face { font-family: 'NGB'; src: url('../font/6856.ttf'); }
-@font-face { font-family: 'NGO'; src: url('../font/6789.ttf'); }
+@font-face { font-family: 'NGO'; src: url('../font/6789.ttf'); }*/
 
 #mti_wfs_colophon { display: none !important;}
 
@@ -52,7 +52,7 @@ img { display: block; }
 #header #subnavswrapper { width: 100%; height: 104px; background: #000000; display: none;  }
 #header #subnavswrapper #subnavs { width: 1137px; height: 104px; position: relative; margin: 0 auto; }
 #header #subnavswrapper #subnavs .about { position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; padding-top: 21px; display: none; }
-#header #subnavswrapper #subnavs .about p { width: 370px; color: #FFFFFF; font-family:'Trade Gothic W01 Cn 18'; font-size: 13px; line-height: 15px; }
+#header #subnavswrapper #subnavs .about p { width: 370px; color: #FFFFFF; font-family: 'Trade Gothic W01 Cn 18'; font-size: 13px; line-height: 15px; }
 #header #subnavswrapper #subnavs .about .links { position: absolute; top: 30px; left: 512px; width: 150px; height: 40px; }
 #header #subnavswrapper #subnavs .about .links .flickr { margin-right: 16px; width: 24px; height: 62px; background: url('../img/flickrBtn.png') top left no-repeat; }
 #header #subnavswrapper #subnavs .about .links .flickr:hover { background-position: -24px 0px; }
@@ -61,9 +61,9 @@ img { display: block; }
 #header #subnavswrapper #subnavs .about .links .imdb { width: 32px; height: 62px; background: url('../img/imdbBtn.png') top left no-repeat; }
 #header #subnavswrapper #subnavs .about .links .imdb:hover { background-position: -32px 0px; }
 #header #subnavswrapper #subnavs .about .links a { float: left; margin-right: 20px; }
-#header #subnavswrapper #subnavs .contact { position: absolute; width: 500px; height: 100%; top: 0px; left: 0px; padding-left: 255px; padding-top: 48px; display: none; font-family: 'NGN'; font-size: 12px; }
-#header #subnavswrapper #subnavs .contact .items .name { float: left; margin-right: 47px; color: #FFFFFF; }
-#header #subnavswrapper #subnavs .contact .items .number { float: left; margin-right: 24px; color: #FFFFFF; }
+#header #subnavswrapper #subnavs .contact { position: absolute; width: 500px; height: 100%; top: 0px; left: 0px; padding-left: 255px; padding-top: 48px; display: none; font-family: 'Trade Gothic W01 Cn 18'; font-size: 13px; }
+#header #subnavswrapper #subnavs .contact .items .name { float: left; margin-right: 54px; color: #FFFFFF; }
+#header #subnavswrapper #subnavs .contact .items .number { float: left; margin-right: 66px; color: #FFFFFF; }
 #header #subnavswrapper #subnavs .contact .items .email { float: left; color: #FFFFFF; }
 
 #header #subnavswrapper #subnavs #closeheader { cursor: pointer; position: absolute; top: 56px; right: 0px; display: none; width: 65px; height: 10px; }
@@ -87,7 +87,7 @@ img { display: block; }
 */
 
 #active-label { z-index: 1001; cursor: pointer; height: 20px; position: absolute; bottom: 54px; right: 100px; background: url("../img/labelclose.png") top left no-repeat; padding-left: 24px; display: none; }
-#active-label p { padding: 2px 6px 2px 6px; background-color: #333333; color: #FFFFFF; font: normal 12px 'TradeGothicW01-BoldCn20 675334'; }
+#active-label p { padding: 3px 6px 3px 6px; background-color: #333333; color: #FFFFFF; font: normal 12px 'Trade Gothic W01 Cn 18'; }
 
 #categories { width: 86px; height: 16px; position: absolute; bottom: 56px; right: 0px; z-index: 1000; cursor: pointer; }
 #categories .categories-button { width: 100%; height: 100%; }
