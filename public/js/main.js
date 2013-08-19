@@ -67,15 +67,15 @@ attach_clicks = function() {
 		var src = "http://player.vimeo.com/video/"+$(this).data("id")+"?api=1&player_id=player"+row;
   		var role = $(this).data("role");
   		var main_title = $('.title .main', this).text().replace(" - ", "");
-  		if( ('.title .it', this).length == 0 ) {
-			var sub_title = $('.title .plain', this).text();
+
+  		$(".role", player).html( "<p>"+role+"</p>" );
+  		if( $('.title .it', this).text() != "" ) {
+  			var sub_title = $('.title .it', this).text();
+  			$(".title", player).html( "<p class='main'>"+main_title+"</p><p class='sub'>" + sub_title + "</p>" );
   		} else {
-  			var sub_title = $('.title .it', this).text();	
+  			$(".title", player).html( "<p class='mainonly'>"+main_title+"</p>" );
   		}
   		
-  		$(".role", player).html( "<p>"+role+"</p>" );
-  		$(".title", player).html( "<p class='main'>"+main_title+"</p><p class='sub'>" + sub_title + "</p>" );
-  		//$(".video-wrapper", player).html('<iframe id="player'+row+'"" src="'+src+'&autoplay=1" width="804" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
 
 		$("#backtotop").fadeOut();
 
@@ -98,8 +98,6 @@ $(window).load(function(){
 });
 
 load_categories = function( all ) {
-	//var q = "/categories?cats="+categories.join(",");
-
 	all = all || false;
 
 	if( !all ) {
@@ -133,17 +131,14 @@ setup_thumbs = function(wait) {
 			var vid = $(this).data("id");
 			$.getJSON('http://vimeo.com/api/oembed.json?url=http%3A//vimeo.com/'+vid+'&width=804&callback=?', {format: "json"}, function(data) {
 				if( data.title ) {
-					var title = data.title.split("\"");
+					var title = data.title.replace(/\"/g,'').split(" - ");
 					var new_title = "";
 					if( title.length == 3 )  {
-						new_title = "<span class='main'>" + title[0] + "</span><span class='it'>" + title[1] + "</span><span class='plain'>" + title[2] + "</span>";
+						new_title = "<span class='main'>" + title[0] + "</span> - <span class='it'>" + title[1] + " - " + title[2] + "</span>";
+					} else if( title.length == 2 ) {
+						new_title = "<span class='main'>" + title[0] + "</span> - <span class='it'>" + title[1] + "</span>";
 					} else if( title.length == 1 ) {
-						title = data.title.split("-")
-						if( title.length == 1 ) {
-							new_title = data.title;	
-						} else {
-							new_title = "<span class='main'>" + title[0] + "</span> - <span class='plain'>" + title[1] + "</span>";
-						}
+						new_title = "<span class='main'>" + title[0] + "</span>";
 					}
 					$(".title", value).html(new_title);
 				}

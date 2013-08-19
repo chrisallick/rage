@@ -3,16 +3,6 @@
 */
 html, body { width: 100%; height: 100%; background-color: #FFFFFF; }
 
-/*@font-face { font-family: 'TGBC20'; src: url('../font/TradeGothicLTStd-BdCn20.otf'); }
-@font-face { font-family: 'TGBCO20'; src: url('../font/TradeGothicLTStd-BdCn20Obl.otf'); }
-
-@font-face { font-family: 'TGBC18'; src: url('../font/TradeGothicLTStd-Cn18.otf'); }
-@font-face { font-family: 'TGBCO18'; src: url('../font/TradeGothicLTStd-Cn18Obl.otf'); }
-
-@font-face { font-family: 'NGN'; src: url('../font/6855.ttf'); }
-@font-face { font-family: 'NGB'; src: url('../font/6856.ttf'); }
-@font-face { font-family: 'NGO'; src: url('../font/6789.ttf'); }*/
-
 #mti_wfs_colophon { display: none !important;}
 
 /*font-family:'Trade Gothic W01 Bold';
@@ -113,9 +103,9 @@ img { display: block; }
 .videos .videothumb { width: 363px; height: 250px; float: left; margin-right: 25px; position: relative; }
 .videos .last { margin: 0; }
 .videos .videothumb .thumb { width: 364px; height: 204px; margin-bottom: 26px; }
-.videos .videothumb .title { width: 363px; text-align: center; font: normal 16px "TradeGothicW01-BoldCn20 675334"; color: #000000; text-transform: uppercase; opacity: .7; }
-.videos .videothumb .title .it { font-weight: normal; font: normal 15px "Trade Gothic W01 Obl"; }
-.videos .videothumb .title .plain { font-weight: normal; }
+.videos .videothumb .title { width: 363px; text-align: center; color: #000000; text-transform: uppercase; opacity: .7; }
+.videos .videothumb .title .main { font: normal 14px "TradeGothicW01-BoldCn20 675334"; }
+.videos .videothumb .title .it { font-weight: normal; font: normal 13px "Trade Gothic W01 Obl"; }
 .videos .videothumb .whitebox { position: absolute; top: 0px; left: 0px; width: 364px; height: 204px; opacity: 0; background-color: #FFFFFF; }
 .videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 204px; opacity: 0;
 	-webkit-transition:all .1s ease-in;
@@ -148,6 +138,7 @@ img { display: block; }
 .player-wrapper .player .close { cursor: pointer; position: absolute; top: 39px; right: 74px; width: 93px; height: 26px; background: url("../img/player/close.png") top left no-repeat; }
 .player-wrapper .player .title { position: absolute; top: 267px; left: 59px; width: 294px; text-align: center; color: #FFFFFF; z-index: 2; text-transform: uppercase; }
 .player-wrapper .player .title .main { font-family: "TradeGothicW01-BoldCn20 675334"; font-size: 24px; letter-spacing: 1px; margin-bottom: 5px; }
+.player-wrapper .player .title .mainonly { font-family: "TradeGothicW01-BoldCn20 675334"; font-size: 24px; letter-spacing: 1px; margin-bottom: 5px; padding-top: 28px; }
 .player-wrapper .player .title .sub { font-family: "TradeGothicW01-Cn18Obl"; font-size: 19px; letter-spacing: 1px; }
 .player-wrapper .player .role { position: absolute; top: 356px; left: 59px; width: 294px; text-align: center; color: #000000; font-family: "TradeGothicW01-BoldCn20 675334"; font-size: 18px; z-index: 2; }
 .player-wrapper .player .role p { padding: 3px 18px 3px 18px; background-color: #FFFFFF; display: inline; }
