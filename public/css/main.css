@@ -114,7 +114,7 @@ img { display: block; }
 .videos .last { margin: 0; }
 .videos .videothumb .thumb { width: 364px; height: 204px; margin-bottom: 26px; }
 .videos .videothumb .title { width: 363px; text-align: center; font: normal 16px "TradeGothicW01-BoldCn20 675334"; color: #000000; text-transform: uppercase; opacity: .7; }
-.videos .videothumb .title .it { /*font-style: italic;*/ font-weight: normal; font: normal 16px "Trade Gothic W01 Obl"; }
+.videos .videothumb .title .it { font-weight: normal; font: normal 15px "Trade Gothic W01 Obl"; }
 .videos .videothumb .title .plain { font-weight: normal; }
 .videos .videothumb .whitebox { position: absolute; top: 0px; left: 0px; width: 364px; height: 204px; opacity: 0; background-color: #FFFFFF; }
 .videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 204px; opacity: 0;
