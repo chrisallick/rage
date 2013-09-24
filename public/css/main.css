@@ -42,7 +42,7 @@ img { display: block; }
 #header #subnavswrapper { width: 100%; height: 104px; background: #000000; display: none;  }
 #header #subnavswrapper #subnavs { width: 1137px; height: 104px; position: relative; margin: 0 auto; }
 #header #subnavswrapper #subnavs .about { position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; padding-top: 21px; display: none; }
-#header #subnavswrapper #subnavs .about p { width: 370px; color: #FFFFFF; font-family: 'Trade Gothic W01 Cn 18'; font-size: 12px; letter-spacing: 1px; line-height: 15px; }
+#header #subnavswrapper #subnavs .about p { width: 380px; color: #FFFFFF; font-family: 'Trade Gothic W01 Cn 18'; font-size: 12px; letter-spacing: 1px; line-height: 15px; }
 #header #subnavswrapper #subnavs .about .links { position: absolute; top: 30px; left: 512px; width: 150px; height: 40px; }
 #header #subnavswrapper #subnavs .about .links .flickr { margin-right: 16px; width: 24px; height: 62px; background: url('../img/flickrBtn.png') top left no-repeat; }
 #header #subnavswrapper #subnavs .about .links .flickr:hover { background-position: -24px 0px; }
@@ -51,7 +51,7 @@ img { display: block; }
 #header #subnavswrapper #subnavs .about .links .imdb { width: 32px; height: 62px; background: url('../img/imdbBtn.png') top left no-repeat; }
 #header #subnavswrapper #subnavs .about .links .imdb:hover { background-position: -32px 0px; }
 #header #subnavswrapper #subnavs .about .links a { float: left; margin-right: 20px; }
-#header #subnavswrapper #subnavs .contact { position: absolute; width: 500px; height: 100%; top: 0px; left: 0px; padding-left: 255px; padding-top: 48px; display: none; font-family: 'Trade Gothic W01 Cn 18'; font-size: 14px; letter-spacing: 1px; }
+#header #subnavswrapper #subnavs .contact { position: absolute; width: 500px; height: 100%; top: 0px; left: 0px; padding-left: 255px; padding-top: 48px; display: none; font-family: 'Trade Gothic W01 Cn 18'; font-size: 13px; letter-spacing: 1px; }
 #header #subnavswrapper #subnavs .contact .items .name { float: left; margin-right: 46px; color: #FFFFFF; }
 #header #subnavswrapper #subnavs .contact .items .number { float: left; margin-right: 42px; color: #FFFFFF; }
 #header #subnavswrapper #subnavs .contact .items .email { float: left; color: #FFFFFF; }
@@ -83,11 +83,11 @@ img { display: block; }
 #categories ul { display: none; position: absolute; top: 16px; right: -3px;  background-color: #FFFFFF; padding-top: 18px; width: 137px; }
 #categories ul li { color: #858585; margin-bottom: 10px; font-family: 'TradeGothicW01-BoldCn20 675334'; font-size: 12px; text-align: right; letter-spacing: 1px; }
 #categories ul li p { position: relative; display: inline; }
-#categories ul li p:hover, #categories ul li p:hover span { color: #4c4c4c; }
+#categories ul li p:hover, #categories ul li p:hover span { color: #4c4c4c; display: inline; }
 #categories ul li p span { position: absolute; left: -11px; top: 1px; }
 #categories ul .on { color: #4c4c4c; }
-#categories ul li .plus { color: #F5F5F5; }
-#categories ul .on .plus { color: #4c4c4c; }
+#categories ul li .plus { display: none; }
+#categories ul .on .plus { color: #4c4c4c; display: inline; }
 #categories:hover ul { display: block; }
 
 #filter { width: 135px; height: 20px; background-color: #000000; }
@@ -105,7 +105,7 @@ img { display: block; }
 .videos .videothumb .thumb { width: 364px; height: 204px; margin-bottom: 26px; }
 .videos .videothumb .title { width: 363px; text-align: center; color: #000000; text-transform: uppercase; opacity: .7; }
 .videos .videothumb .title .main { font: normal 14px "TradeGothicW01-BoldCn20 675334"; }
-.videos .videothumb .title .it { font-weight: normal; font: normal 13px "Trade Gothic W01 Obl"; }
+.videos .videothumb .title .it { font-weight: normal; font: normal 14px "TradeGothicW01-Cn18Obl"; }
 .videos .videothumb .whitebox { position: absolute; top: 0px; left: 0px; width: 364px; height: 204px; opacity: 0; background-color: #FFFFFF; }
 .videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 204px; opacity: 0;
 	-webkit-transition:all .1s ease-in;
@@ -139,7 +139,7 @@ img { display: block; }
 .player-wrapper .player .title { position: absolute; top: 267px; left: 59px; width: 294px; text-align: center; color: #FFFFFF; z-index: 2; text-transform: uppercase; }
 .player-wrapper .player .title .main { font-family: "TradeGothicW01-BoldCn20 675334"; font-size: 24px; letter-spacing: 1px; margin-bottom: 5px; }
 .player-wrapper .player .title .mainonly { font-family: "TradeGothicW01-BoldCn20 675334"; font-size: 24px; letter-spacing: 1px; margin-bottom: 5px; padding-top: 28px; }
-.player-wrapper .player .title .sub { font-family: "TradeGothicW01-Cn18Obl"; font-size: 19px; letter-spacing: 1px; }
+.player-wrapper .player .title .sub { font-family: "TradeGothicW01-Cn18Obl"; font-size: 19px; letter-spacing: 1px; padding-right: 5px; }
 .player-wrapper .player .role { position: absolute; top: 356px; left: 59px; width: 294px; text-align: center; color: #000000; font-family: "TradeGothicW01-BoldCn20 675334"; font-size: 18px; z-index: 2; }
 .player-wrapper .player .role p { padding: 3px 18px 3px 18px; background-color: #FFFFFF; display: inline; }
 

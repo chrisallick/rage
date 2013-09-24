@@ -213,7 +213,7 @@ $(document).ready(function() {
 				$("#subnavswrapper").slideDown("fast");
 			} else {
 				$("."+currentSubNav).fadeOut("fast",function(){
-					$("#subnavs .about").fadeIn("fast");	
+					$("#subnavs .about").fadeIn("fast");
 				});
 			}
 			currentSubNav = "about";
@@ -230,7 +230,7 @@ $(document).ready(function() {
 				$("#subnavswrapper").slideDown("fast");
 			} else {
 				$("."+currentSubNav).fadeOut("fast",function(){
-					$("#subnavs .contact").fadeIn("fast");	
+					$("#subnavs .contact").fadeIn("fast");
 				});
 			}
 			currentSubNav = "contact";
@@ -244,7 +244,10 @@ $(document).ready(function() {
 		$("#subnavs").removeClass().addClass("closed");
 		$("#closeheader").fadeOut("fast");
 		$(".subnav").fadeOut("fast");
-		$("#subnavswrapper").slideUp("fast" );
+		$("#subnavswrapper").slideUp("fast");
+
+		$("#categories .on").removeClass("on");
+		$("#active-label").hide();
 
 		$("body,html").animate({
 			scrollTop: 0
