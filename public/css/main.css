@@ -109,8 +109,8 @@ img { display: block; }
 .videos .last { margin: 0; }
 .videos .videothumb .thumb { width: 364px; height: 204px; margin-bottom: 26px; }
 .videos .videothumb .title { width: 363px; text-align: center; color: #000000; text-transform: uppercase; opacity: .7; }
-.videos .videothumb .title .main { font: normal 14px "TradeGothicW01-BoldCn20 675334"; }
-.videos .videothumb .title .it { font-weight: normal; font: normal 14px "TradeGothicW01-Cn18Obl"; }
+.videos .videothumb .title .main { font: normal 16px "TradeGothicW01-BoldCn20 675334"; }
+.videos .videothumb .title .it { font-weight: normal; font: normal 16px "TradeGothicW01-Cn18Obl"; }
 .videos .videothumb .whitebox { position: absolute; top: 0px; left: 0px; width: 364px; height: 204px; opacity: 0; background-color: #FFFFFF; }
 .videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 204px; opacity: 0;
 	-webkit-transition:all .1s ease-in;

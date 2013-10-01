@@ -82,7 +82,7 @@ attach_clicks = function() {
 		playing = true;
 		currentPlayer = row;
 
-		$(player).animate({
+		$(player).delay(600).animate({
 			height: 608
 		}, function() {
 			$(".video-wrapper", player).html('<iframe id="player'+row+'"" src="'+src+'&autoplay=1" width="804" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
