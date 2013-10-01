@@ -63,6 +63,11 @@ img { display: block; }
 	border-left: 7px solid transparent;
 	border-right: 7px solid transparent;
 	border-bottom: 10px solid white;
+
+	-webkit-transition:all .1s ease-in;
+	-moz-transition:all .1s ease-in;
+	-o-transition:all .1s ease-in;
+	transition:all .1s ease-in;
 }
 #header #subnavswrapper #subnavs #closeheader.closing .arrow {
 	-webkit-transform: rotate(180deg);

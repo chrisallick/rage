@@ -259,11 +259,11 @@ $(document).ready(function() {
 	$("#closeheader").click(function() {
 		currentSubNav = "";
 		$("#subnavs").removeClass().addClass("closed");
-		$("#closeheader").addClass("closing").fadeOut("fast",function(){
+		$("#closeheader").addClass("closing").delay(250).fadeOut("fast",function(){
 			$(this).removeClass("closing");
 		});
-		$(".subnav").fadeOut("fast");
-		$("#subnavswrapper").slideUp("fast" );
+		$(".subnav").delay(250).fadeOut("fast");
+		$("#subnavswrapper").delay(250).slideUp("fast" );
 	});
 
 	$("#backtotop").click(function(){
