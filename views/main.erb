@@ -2,6 +2,7 @@
 				<div class="row" data-index="<%= index %>">
 	                 <div class="videos" class="clear">
 	                    <div class="videothumb" data-role="<%= one[:role] %>" data-id="<%= one[:id] %>">
+	                    	<img class="loading" src="/img/loading.gif" />
 	                        <img class="thumb" src="" />
 	                        <div class="whitebox"></div>
 	                        <img class="overlay" src="/img/overlay_thumb.png" />
@@ -9,6 +10,7 @@
 	                    </div>
 	                    <% if two %>
 		                    <div class="videothumb" data-role="<%= two[:role] %>" data-id="<%= two[:id] %>">
+		                    	<img class="loading" src="/img/loading.gif" />
 		                        <img class="thumb" src="" />
 		                        <div class="whitebox"></div>
 		                        <img class="overlay" src="/img/overlay_thumb.png" />
@@ -17,6 +19,7 @@
 	                    <% end %>
 	                    <% if three %>
 		                    <div class="videothumb last" data-role="<%= three[:role] %>" data-id="<%= three[:id] %>">
+		                    	<img class="loading" src="/img/loading.gif" />
 		                        <img class="thumb" src="" />
 		                        <div class="whitebox"></div>
 		                        <img class="overlay" src="/img/overlay_thumb.png" />

@@ -107,24 +107,25 @@ img { display: block; }
 .videos { cursor: pointer; width: 1140px; height: 270px; margin: 0 auto; }
 .videos .videothumb { width: 363px; height: 250px; float: left; margin-right: 25px; position: relative; }
 .videos .last { margin: 0; }
-.videos .videothumb .thumb { width: 364px; height: 204px; margin-bottom: 26px; }
-.videos .videothumb .title { width: 363px; text-align: center; color: #000000; text-transform: uppercase; opacity: .7; }
+.videos .videothumb .loading { position: absolute; top: 84px; left: 159px; z-index: 1; }
+.videos .videothumb .thumb { position: absolute; top: 0px; left: 0px; width: 364px; height: 204px; margin-bottom: 26px; z-index: 2; }
+.videos .videothumb .title { position: absolute; bottom: 0px; left: 0px; width: 363px; text-align: center; color: #000000; text-transform: uppercase; opacity: .7; }
 .videos .videothumb .title .main { font: normal 16px "TradeGothicW01-BoldCn20 675334"; }
 .videos .videothumb .title .it { font-weight: normal; font: normal 16px "TradeGothicW01-Cn18Obl"; }
 .videos .videothumb .whitebox { position: absolute; top: 0px; left: 0px; width: 364px; height: 204px; opacity: 0; background-color: #FFFFFF; }
-.videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 204px; opacity: 0;
+.videos .videothumb .overlay { position: absolute; top: 0px; left: -10px; width: 384px; height: 204px; opacity: 0; z-index: 3;
 	-webkit-transition:all .1s ease-in;
 	-moz-transition:all .1s ease-in;
 	-o-transition:all .1s ease-in;
 	transition:all .1s ease-in;
 }
-.videos .videothumb:hover .whitebox { opacity: .6;
+.videos .videothumb:hover .whitebox { opacity: .6; z-index: 3;
 	-webkit-transition:all .2s ease-in;
 	-moz-transition:all .2s ease-in;
 	-o-transition:all .2s ease-in;
 	transition:all .2s ease-in;
 }
-.videos .videothumb:hover .overlay { opacity: 1;
+.videos .videothumb:hover .overlay { opacity: 1; z-index: 3;
 	-webkit-transition:all .2s ease-in;
 	-moz-transition:all .2s ease-in;
 	-o-transition:all .2s ease-in;
