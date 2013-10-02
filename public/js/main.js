@@ -30,6 +30,8 @@ attach_clicks = function() {
 			$(".playing-now .video-wrapper").html("");
 		}
 
+		var el = $(this);
+
 		var row = $(this).parents(".row").data("index");
 
 		// unload anything
@@ -45,12 +47,14 @@ attach_clicks = function() {
 					height: 0
 				}, 100, function() {
 					$("body,html").animate({
-						scrollTop: $(player).offset().top - 115// - $(window).height()/2 + 250
+						//scrollTop: $(player).offset().top - 115
+						scrollTop: $(player).offset().top - $(window).height()/2 + 304
 					});
 				}).removeClass("playing-now");
 			} else {
 				$("body,html").animate({
-					scrollTop: $(player).offset().top - 115// - $(window).height()/2 + 250
+					//scrollTop: $(player).offset().top - 115
+					scrollTop: $(player).offset().top - $(window).height()/2 + 304
 				});
 			}
 		}
@@ -96,6 +100,8 @@ attach_clicks = function() {
 $(window).load(function(){
 	attach_clicks();
 });
+
+
 
 load_categories = function( all ) {
 	all = all || false;
@@ -163,11 +169,39 @@ var currentPlayer = -1;
 var currentSubNav = "";
 var category = "";
 $(document).ready(function() {
-	setTimeout(function(){
-		$("body,html").css({
-			scrollTop: 0
-		});
-	}, 10);
+
+	// setTimeout(function(){
+	// 	$("body,html").css({
+	// 		scrollTop: 0
+	// 	});
+	// }, 10);
+	
+    if (window.location.hash) { 
+        //bind to scroll function
+        $(document).scroll( function() {
+            var hash = window.location.hash
+            var hashName = hash.substring(1, hash.length);
+            var element;
+
+            //if element has this id then scroll to it
+            if ($(hash).length != 0) {
+                element = $(hash);
+            }
+            //catch cases of links that use anchor name
+            else if ($('a[name="' + hashName + '"]').length != 0)
+            {
+                //just use the first one in case there are multiples
+                element = $('a[name="' + hashName + '"]:first');
+            }
+
+            //if we have a target then go to it
+            if (element != undefined) {
+                window.scrollTo(0, element.position().top);
+            }
+            //unbind the scroll event
+            $(document).unbind("scroll");
+        });
+    }
 
 	setup_thumbs();
 
