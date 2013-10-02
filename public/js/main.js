@@ -45,7 +45,7 @@ attach_clicks = function() {
 			if( $(".playing-now").length > 0 ) {
 				$(".playing-now").animate({
 					height: 0
-				}, 100, function() {
+				}, 300, function() {
 					$("body,html").animate({
 						//scrollTop: $(player).offset().top - 115
 						scrollTop: $(player).offset().top - $(window).height()/2 + 304
@@ -175,7 +175,7 @@ $(document).ready(function() {
 	// 		scrollTop: 0
 	// 	});
 	// }, 10);
-	
+
     if (window.location.hash) { 
         //bind to scroll function
         $(document).scroll( function() {
