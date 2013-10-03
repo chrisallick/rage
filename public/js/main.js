@@ -26,18 +26,12 @@ attach_clicks = function() {
 
 	$(".videothumb").click(function() {
 		if( playing ) {
-			//vapi.api("pause");
 			$(".playing-now .video-wrapper").html("");
 		}
 
 		var el = $(this);
 
 		var row = $(this).parents(".row").data("index");
-
-		// unload anything
-		// collapse and unfold
-		// scroll
-		// load video
 
 		var player = $(".player-wrapper")[row];
 
@@ -46,16 +40,18 @@ attach_clicks = function() {
 				$(".playing-now").animate({
 					height: 0
 				}, 300, function() {
-					$("body,html").animate({
-						//scrollTop: $(player).offset().top - 115
-						scrollTop: $(player).offset().top - $(window).height()/2 + 304
-					});
+					if( row != 21 || row != 22 ) {
+						$("body,html").animate({
+							scrollTop: $(player).offset().top - $(window).height()/2 + 304
+						});						
+					}
 				}).removeClass("playing-now");
 			} else {
-				$("body,html").animate({
-					//scrollTop: $(player).offset().top - 115
-					scrollTop: $(player).offset().top - $(window).height()/2 + 304
-				});
+				if( row != 21 || row != 22 ) {
+					$("body,html").animate({
+						scrollTop: $(player).offset().top - $(window).height()/2 + 304
+					});
+				}
 			}
 		}
 
@@ -67,7 +63,6 @@ attach_clicks = function() {
 
 		$($(".player-wrapper")[row]).addClass("playing-now");
 
-		// populate the data
 		var src = "http://player.vimeo.com/video/"+$(this).data("id")+"?api=1&player_id=player"+row;
   		var role = $(this).data("role");
   		var main_title = $('.title .main', this).text().replace(" - ", "");
@@ -80,7 +75,6 @@ attach_clicks = function() {
   			$(".title", player).html( "<p class='mainonly'>"+main_title+"</p>" );
   		}
   		
-
 		$("#backtotop").fadeOut();
 
 		playing = true;
@@ -89,10 +83,15 @@ attach_clicks = function() {
 		$(player).delay(600).animate({
 			height: 608
 		}, function() {
+			if( row == 21 || row == 22 ) {
+				$("body,html").animate({
+					scrollTop: $(player).offset().top - $(window).height()/2 + 304
+				});
+			}
 			$(".video-wrapper", player).html('<iframe id="player'+row+'"" src="'+src+'&autoplay=1" width="804" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
 			$(".player",player).animate({
 				opacity: 1
-			});			
+			});
 		});
 	});
 }
