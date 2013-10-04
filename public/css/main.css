@@ -147,7 +147,7 @@ img { display: block; }
 .player-wrapper .player .title .main { font-family: "TradeGothicW01-BoldCn20 675334"; font-size: 24px; letter-spacing: 1px; margin-bottom: 5px; }
 .player-wrapper .player .title .mainonly { font-family: "TradeGothicW01-BoldCn20 675334"; font-size: 24px; letter-spacing: 1px; margin-bottom: 5px; padding-top: 28px; }
 .player-wrapper .player .title .sub { font-family: "TradeGothicW01-Cn18Obl"; font-size: 19px; letter-spacing: 1px; padding-right: 5px; }
-.player-wrapper .player .role { position: absolute; top: 356px; left: 59px; width: 294px; text-align: center; color: #000000; font-family: "TradeGothicW01-BoldCn20 675334"; font-size: 18px; z-index: 2; }
+.player-wrapper .player .role { position: absolute; top: 358px; left: 59px; width: 294px; text-align: center; color: #000000; font-family: "TradeGothicW01-BoldCn20 675334"; font-size: 18px; z-index: 2; }
 .player-wrapper .player .role p { padding: 3px 18px 3px 18px; background-color: #FFFFFF; display: inline; }
 
 .player-wrapper .player .rolebgtop { position: absolute; top: 332px; left: -20px; width: 462px; height: 1px; z-index: 1; background: url('../img/player/rolebgtop.png') top left no-repeat; opacity: 0.2; }
