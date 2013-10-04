@@ -151,7 +151,7 @@ img { display: block; }
 .player-wrapper .player .role p { padding: 3px 18px 3px 18px; background-color: #FFFFFF; display: inline; }
 
 .player-wrapper .player .rolebgtop { position: absolute; top: 332px; left: -20px; width: 462px; height: 1px; z-index: 1; background: url('../img/player/rolebgtop.png') top left no-repeat; opacity: 0.2; }
-.player-wrapper .player .rolebgbottom { position: absolute; top: 333px; left: -20px; width: 462px; height: 142px;  opacity: 0.7; z-index: 1; background: url('../img/player/rolebgbottom.png') top left no-repeat; }
+.player-wrapper .player .rolebgbottom { position: absolute; top: 333px; left: -20px; width: 462px; height: 142px;  opacity: 1; z-index: 1; background: url('../img/player/rolebgbottom.png') top left no-repeat; }
 
 /*
 	Footer
