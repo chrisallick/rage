@@ -70,8 +70,8 @@ img { display: block; }
 	transition:all .1s ease-in;
 }
 #header #subnavswrapper #subnavs #closeheader.closing .arrow {
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
 }
 
 /*
