@@ -41,16 +41,28 @@ attach_clicks = function() {
 					height: 0
 				}, 300, function() {
 					if( row != 21 || row != 22 ) {
-						$("body,html").animate({
-							scrollTop: $(player).offset().top - $(window).height()/2 + 304
-						});						
+						if( $(window).height() < 720 ) {
+							$("body,html").animate({
+								scrollTop: $(player).offset().top - 107
+							});
+						} else {
+							$("body,html").animate({
+								scrollTop: $(player).offset().top - $(window).height()/2 + 304
+							});
+						}
 					}
 				}).removeClass("playing-now");
 			} else {
 				if( row != 21 || row != 22 ) {
-					$("body,html").animate({
-						scrollTop: $(player).offset().top - $(window).height()/2 + 304
-					});
+					if( $(window).height() < 720 ) {
+						$("body,html").animate({
+							scrollTop: $(player).offset().top - 107
+						});
+					} else {
+						$("body,html").animate({
+							scrollTop: $(player).offset().top - $(window).height()/2 + 304
+						});
+					}
 				}
 			}
 		}
@@ -84,9 +96,15 @@ attach_clicks = function() {
 			height: 608
 		}, function() {
 			if( row == 21 || row == 22 ) {
-				$("body,html").animate({
-					scrollTop: $(player).offset().top - $(window).height()/2 + 304
-				});
+				if( $(window).height() < 720 ) {
+					$("body,html").animate({
+						scrollTop: $(player).offset().top - 107
+					});
+				} else {
+					$("body,html").animate({
+						scrollTop: $(player).offset().top - $(window).height()/2 + 304
+					});
+				}
 			}
 			$(".video-wrapper", player).html('<iframe id="player'+row+'"" src="'+src+'&autoplay=1" width="804" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
 			$(".player",player).animate({
