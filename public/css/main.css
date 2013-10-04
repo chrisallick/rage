@@ -108,7 +108,7 @@ img { display: block; }
 .videos .videothumb { width: 363px; height: 250px; float: left; margin-right: 25px; position: relative; }
 .videos .last { margin: 0; }
 .videos .videothumb .loading-wrapper { position: absolute; top: 0px; left: 0px; width: 364px; height: 204px; background-color: #F5F5F5; z-index: 1; }
-.videos .videothumb .loading-wrapper img { position: absolute; top: 90px; left: 171px; z-index: 1; width: 24px; height: 24px; }
+.videos .videothumb .loading-wrapper img { position: absolute; top: 90px; left: 170px; z-index: 1; width: 24px; height: 24px; }
 .videos .videothumb .thumb { position: absolute; top: 0px; left: 0px; width: 364px; height: 204px; margin-bottom: 26px; z-index: 2; }
 .videos .videothumb .title { position: absolute; bottom: 0px; left: 0px; width: 363px; text-align: center; color: #000000; text-transform: uppercase; opacity: .7; }
 .videos .videothumb .title .main { font: normal 16px "TradeGothicW01-BoldCn20 675334"; }
